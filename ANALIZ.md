@@ -65,8 +65,21 @@ Ayrıca alt bilgide "bilgilendirme amaçlıdır, tanı/tedavi yerine geçmez" uy
 - [ ] Sık sorulan sorular (SSS) bölümü
 - [ ] Hasta yorumları (mevzuata uygun şekilde, Google yorumları linki)
 - [ ] Gerçek logo entegrasyonu
-**Aşama 3 – Yayın**
-- [ ] Alan adı + GitHub Pages bağlantısı (veya Netlify/Vercel)
+**Aşama 3 – Admin paneli (Cloudflare kararı verildi, feedback sonrasında yapılacak)**
+Amaç: sosyal medya uzmanı GitHub'a girmeden video ve görselleri kendisi güncelleyebilsin.
+- [x] İçerik `content.json`'a taşındı (videolar, bilgi serileri, galeri, iletişim)
+- [ ] Çağrı: ücretsiz Cloudflare hesabı açıp GitHub (Candan26) bağlantısını yapacak
+- [ ] Siteyi Cloudflare Pages'e taşı (GitHub'a her push'ta otomatik yayın); istenirse repo private
+- [ ] `/admin` sayfası: Türkçe, mobil uyumlu, kullanıcı adı + şifre ile giriş
+- [ ] Sunucu fonksiyonu (Pages Functions): şifre kontrolü + oturum çerezi; GitHub anahtarı sadece Cloudflare'de gizli değişken olarak durur
+- [ ] Videolar: YouTube linki yapıştır → ekle / sil / sırala
+- [ ] Bilgi Köşesi: seri ekle / sil, seriye görsel yükle (otomatik küçültme + WebP)
+- [ ] Galeri: fotoğraf ekle / sil
+- [ ] "Yayınla" → değişiklik repoya commit edilir, site 1–2 dk'da güncellenir (her değişiklik geri alınabilir)
+- [ ] İsteğe bağlı: iletişim bilgileri ve çalışma saatleri de panelden düzenlensin
+
+**Aşama 4 – Yayın**
+- [ ] Alan adı bağlantısı (Cloudflare DNS)
 - [ ] Google Business profili, Search Console, sitemap
 - [ ] Randevu formunu e-postaya da düşürme (Formspree vb.)
 - [ ] İngilizce dil seçeneği (istenirse)
