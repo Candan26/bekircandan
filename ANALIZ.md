@@ -35,7 +35,7 @@
 | Büyük hero: doktor fotoğrafı + unvan + WhatsApp butonu | ✅ Hero: Doruk ofis fotoğrafı, unvan, uzmanlık etiketleri, Randevu + WhatsApp |
 | "Uzman Hizmet" ikon kartları | ✅ 6 uzmanlık kartı (özel çizilmiş ikonlar) + üstte 4 hızlı kart |
 | Hakkında – zaman çizelgesi (1993, 1999, 2004...) | ✅ Özgeçmiş + zaman çizelgesi eklendi (yıllar isteğe bağlı) |
-| Çalışma saatleri kutusu | ❌ Bilgi yok (eklenecek) |
+| Çalışma saatleri kutusu | ✅ Pzt–Cmt 09.00–18.00 (üst şerit, randevu, iletişim, alt bilgi) |
 | Ameliyat örnekleri + videolar | ✅ Video bölümü (15 video) + ameliyathane galerisi |
 | Online randevu formu | ✅ Form → WhatsApp'a hazır mesaj olarak gider (sunucu gerekmez) |
 | İletişim + Google harita | ✅ İletişim kartları + Doruk Nilüfer Hastanesi haritası |
@@ -49,9 +49,9 @@
 - [ ] **Facebook** sayfa linki
 - [x] **Özgeçmiş** geldi ve eklendi
 - [ ] (İsteğe bağlı) Özgeçmişe yıllar: tıp mezuniyeti, uzmanlık, her kurumda çalışma yılları; varsa sertifika/kurslar
-- [ ] Muayene / çalışma saatleri
-- [ ] E-posta adresi (isteğe bağlı)
-- [ ] Logo dosyası (postlarda görünen "Bangin Bekir Candan" logosu) – yüksek çözünürlüklü/PNG/SVG
+- [x] Çalışma saatleri: Pazar hariç her gün 09.00–18.00
+- [x] E-posta: bbekircandan@hotmail.com (".com" uzantısı teyit edilecek)
+- [x] Logo geldi; ikon kısmı menüde, alt bilgide ve favicon'da kullanılıyor (vektörel SVG hali gelirse daha keskin olur)
 - [ ] Alan adı tercihi (ör. `bekircandan.com`, `drbekircandan.com`)
 
 ## 4. Dikkat: Sağlık tanıtım mevzuatı ⚠️
@@ -61,11 +61,12 @@ Ayrıca alt bilgide "bilgilendirme amaçlıdır, tanı/tedavi yerine geçmez" uy
 ## 5. Yol haritası
 **Aşama 1 – Base (şimdi)** ✅ Tek sayfa, tüm bölümler, mobil uyumlu, GitHub Pages'te yayın
 **Aşama 2 – Feedback sonrası**
-- [ ] Eksik bilgilerin eklenmesi (telefon, saatler)
+- [ ] Eksik bilgilerin eklenmesi (telefon/WhatsApp, Facebook)
 - [ ] Her uzmanlık için ayrı detay sayfası (Diz protezi, Omuz artroskopisi, Halluks valgus... → SEO için kritik)
 - [ ] Sık sorulan sorular (SSS) bölümü
 - [ ] Hasta yorumları (mevzuata uygun şekilde, Google yorumları linki)
-- [ ] Gerçek logo entegrasyonu
+- [x] Logo entegrasyonu
+- [ ] Renk kararı: logo turkuaz, site vurgusu bordo (Instagram görselleriyle uyumlu) – turkuaza geçilsin mi?
 **Aşama 3 – Admin paneli (Cloudflare kararı verildi, feedback sonrasında yapılacak)**
 Amaç: sosyal medya uzmanı GitHub'a girmeden video ve görselleri kendisi güncelleyebilsin.
 - [x] İçerik `content.json`'a taşındı (videolar, bilgi serileri, galeri, iletişim)

@@ -30,6 +30,12 @@ function applyContact(c) {
     a.href = waLink('Merhaba, randevu almak istiyorum.');
     if (waNumber()) a.target = '_blank'; else a.removeAttribute('target');
   });
+  $$('[data-email]').forEach(a => { a.href = CONTACT.email ? `mailto:${CONTACT.email}` : '#iletisim'; });
+  $$('[data-email-text]').forEach(el => { el.textContent = CONTACT.email || 'E-posta (eklenecek)'; });
+  $$('[data-hours]').forEach(el => {
+    const h = el.dataset.hours === 'short' ? (CONTACT.hoursShort || CONTACT.hours) : CONTACT.hours;
+    if (h) el.textContent = h;
+  });
   $$('[data-link]').forEach(a => {
     const url = CONTACT[a.dataset.link];
     if (url) { a.href = url; a.target = '_blank'; } else { a.href = '#iletisim'; a.removeAttribute('target'); }

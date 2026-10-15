@@ -95,6 +95,7 @@ button { font: inherit; cursor: pointer; }
 .header__inner { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); gap: 20px; }
 
 .brand { display: flex; align-items: center; gap: 12px; }
+.brand__logo { width: 46px; height: 46px; border-radius: 10px; flex: none; box-shadow: var(--shadow); }
 .brand__mark {
   display: grid; grid-template-columns: 1fr 1fr; width: 46px; height: 46px; border-radius: 12px; overflow: hidden;
   font-family: var(--display); font-weight: 700; font-size: 1.15rem; color: #fff; box-shadow: var(--shadow);
@@ -306,6 +307,8 @@ button { font: inherit; cursor: pointer; }
 .appt__list li { display: flex; align-items: center; gap: 12px; font-weight: 600; color: #fff; }
 .appt__list svg { width: 26px; height: 26px; padding: 5px; border-radius: 50%; background: rgba(255,255,255,.12); color: #8ff0b4; }
 .appt__quick { display: flex; flex-wrap: wrap; gap: 12px; }
+.appt__hours { display: flex; align-items: center; gap: 12px; margin: -8px 0 26px; color: #fff; }
+.appt__hours > svg { width: 26px; height: 26px; padding: 5px; border-radius: 50%; background: rgba(255,255,255,.12); color: #ffb8c3; }
 
 .form { background: #fff; color: var(--ink); border-radius: 24px; padding: clamp(22px, 4vw, 36px); box-shadow: 0 40px 80px -30px rgba(0,0,0,.6); display: grid; gap: 16px; }
 .form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -338,6 +341,7 @@ button { font: inherit; cursor: pointer; }
 .ccard__ic--ig { background: linear-gradient(135deg, #feda75, #d62976 50%, #4f5bd5); color: #fff; }
 .ccard__ic--fb { background: #e7efff; color: #1877f2; }
 .ccard__ic--yt { background: #ffe8e8; color: #e00; }
+.ccard--wide { grid-column: span 2; }
 .contact__map { border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); background: var(--sky); }
 .contact__map iframe { width: 100%; height: 400px; border: 0; display: block; }
 
@@ -424,7 +428,7 @@ button { font: inherit; cursor: pointer; }
 @media (max-width: 640px) {
   :root { --header-h: 66px; }
   .topbar__info > span { display: none; }
-  .brand__mark { width: 40px; height: 40px; font-size: 1rem; }
+  .brand__logo { width: 40px; height: 40px; }
   .brand__text strong { font-size: .9rem; }
   .brand__text small { font-size: .68rem; }
   .hero__card { font-size: .76rem; padding: 9px 12px; }
@@ -445,6 +449,7 @@ button { font: inherit; cursor: pointer; }
   .gallery button { margin-bottom: 10px; }
   .form__row, .contact__cards { grid-template-columns: 1fr; }
   .contact__map iframe { height: 320px; }
+  .ccard--wide { grid-column: auto; }
   .about__badge { left: -10px; }
   .about__media::before { inset: 20px -12px -12px 20px; }
   .footer__grid { grid-template-columns: 1fr; }

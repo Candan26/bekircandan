@@ -10,7 +10,8 @@
   <meta property="og:description" content="Protez cerrahisi, artroskopi, kırık ve travma cerrahisi. Doruk Nilüfer Hastanesi, Bursa.">
   <meta property="og:image" content="assets/img/doctor/hero.webp">
   <meta property="og:type" content="website">
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/brand/favicon-48.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -27,6 +28,7 @@
     <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-3.8 31 31 0 0 0-.4-3.8ZM10 15V9l5.2 3L10 15Z"/></symbol>
     <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5Z"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></g></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
@@ -48,6 +50,8 @@
       <a data-tel href="#"><svg><use href="#i-phone"/></svg><span data-phone-text>Telefon</span></a>
       <span class="topbar__sep"></span>
       <span><svg><use href="#i-pin"/></svg>Doruk Nilüfer Hastanesi · Bursa</span>
+      <span class="topbar__sep"></span>
+      <span><svg><use href="#i-clock"/></svg><span data-hours="short">Pzt – Cmt 09.00 – 18.00</span></span>
     </div>
     <div class="topbar__social">
       <a data-link="instagram" aria-label="Instagram" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg></a>
@@ -61,7 +65,7 @@
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="#top" class="brand" aria-label="Ana sayfa">
-      <span class="brand__mark" aria-hidden="true"><span>B</span><span>C</span></span>
+      <img class="brand__logo" src="assets/img/brand/logo-icon.png" alt="" width="46" height="46">
       <span class="brand__text">
         <strong>Op. Dr. Bangin Bekir Candan</strong>
         <small>Ortopedi ve Travmatoloji Uzmanı</small>
@@ -253,6 +257,7 @@
           <li><svg><use href="#i-check"/></svg>Ameliyat öncesi değerlendirme</li>
           <li><svg><use href="#i-check"/></svg>Görüntüleme (MR, röntgen) değerlendirmesi</li>
         </ul>
+        <p class="appt__hours"><svg><use href="#i-clock"/></svg><span><strong>Çalışma saatleri:</strong> <span data-hours>Pazartesi – Cumartesi, 09.00 – 18.00</span></span></p>
         <div class="appt__quick">
           <a data-tel href="#" class="btn btn--light"><svg><use href="#i-phone"/></svg> <span data-phone-text>Ara</span></a>
           <a href="tel:4440455" class="btn btn--outline-light">Doruk Çağrı Merkezi · 444 0 455</a>
@@ -296,10 +301,12 @@
         <div class="contact__cards">
           <a data-tel href="#" class="ccard reveal"><span class="ccard__ic"><svg><use href="#i-phone"/></svg></span><div><small>Telefon</small><strong data-phone-text>—</strong></div></a>
           <a data-wa href="#" class="ccard reveal" target="_blank" rel="noopener"><span class="ccard__ic ccard__ic--wa"><svg><use href="#i-wa"/></svg></span><div><small>WhatsApp</small><strong>Mesaj gönderin</strong></div></a>
+          <a data-email href="#" class="ccard reveal"><span class="ccard__ic"><svg><use href="#i-mail"/></svg></span><div><small>E-posta</small><strong data-email-text>—</strong></div></a>
           <a data-link="instagram" class="ccard reveal" target="_blank" rel="noopener"><span class="ccard__ic ccard__ic--ig"><svg><use href="#i-ig"/></svg></span><div><small>Instagram</small><strong>@op.dr.banginbekircandan</strong></div></a>
           <a data-link="facebook" class="ccard reveal" target="_blank" rel="noopener"><span class="ccard__ic ccard__ic--fb"><svg><use href="#i-fb"/></svg></span><div><small>Facebook</small><strong>Sayfamızı takip edin</strong></div></a>
           <a data-link="youtube" class="ccard reveal" target="_blank" rel="noopener"><span class="ccard__ic ccard__ic--yt"><svg><use href="#i-yt"/></svg></span><div><small>YouTube</small><strong>@DrBanginBekirCandan</strong></div></a>
-          <a data-link="maps" class="ccard reveal" target="_blank" rel="noopener"><span class="ccard__ic"><svg><use href="#i-pin"/></svg></span><div><small>Hastane</small><strong>Doruk Nilüfer Hastanesi</strong><span>Konak Mah. Lefkoşe Cd. No:22, Nilüfer / Bursa</span></div></a>
+          <div class="ccard reveal"><span class="ccard__ic"><svg><use href="#i-clock"/></svg></span><div><small>Çalışma saatleri</small><strong data-hours>Pazartesi – Cumartesi, 09.00 – 18.00</strong><span>Pazar kapalı</span></div></div>
+          <a data-link="maps" class="ccard ccard--wide reveal" target="_blank" rel="noopener"><span class="ccard__ic"><svg><use href="#i-pin"/></svg></span><div><small>Hastane</small><strong>Doruk Nilüfer Hastanesi</strong><span>Konak Mah. Lefkoşe Cd. No:22, Nilüfer / Bursa</span></div></a>
         </div>
         <div class="contact__map reveal">
           <iframe title="Doruk Nilüfer Hastanesi haritası" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
@@ -314,7 +321,7 @@
   <div class="container footer__grid">
     <div>
       <a href="#top" class="brand brand--light">
-        <span class="brand__mark" aria-hidden="true"><span>B</span><span>C</span></span>
+        <img class="brand__logo" src="assets/img/brand/logo-icon.png" alt="" width="46" height="46">
         <span class="brand__text"><strong>Op. Dr. Bangin Bekir Candan</strong><small>Ortopedi ve Travmatoloji Uzmanı</small></span>
       </a>
       <p class="footer__note">Bu sitedeki bilgiler yalnızca bilgilendirme amaçlıdır; muayene, tanı ve tedavinin yerine geçmez. Sağlık sorunlarınız için mutlaka hekiminize başvurunuz.</p>
@@ -327,6 +334,8 @@
       <h4>İletişim</h4>
       <ul>
         <li><a data-tel href="#" data-phone-text>—</a></li>
+        <li><a data-email href="#" data-email-text>—</a></li>
+        <li><span data-hours>Pazartesi – Cumartesi, 09.00 – 18.00</span></li>
         <li>Doruk Nilüfer Hastanesi<br>Lefkoşe Cd. No:22, Nilüfer / Bursa</li>
       </ul>
       <div class="footer__social">
