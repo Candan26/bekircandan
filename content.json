@@ -1,0 +1,309 @@
+{
+  "_not": "Bu dosya sitedeki düzenlenebilir içeriği tutar. Admin paneli bu dosyayı günceller.",
+  "contact": {
+    "phone": "",
+    "phoneText": "",
+    "whatsapp": "",
+    "email": "",
+    "hours": "",
+    "instagram": "https://www.instagram.com/op.dr.banginbekircandan/",
+    "youtube": "https://www.youtube.com/@DrBanginBekirCandan",
+    "facebook": "",
+    "maps": "https://www.google.com/maps/search/?api=1&query=Doruk+Nil%C3%BCfer+Hastanesi+Bursa"
+  },
+  "videosInitial": 10,
+  "videos": [
+    {
+      "title": "Bu kemik nasıl kırıldı?",
+      "youtube": "https://www.youtube.com/shorts/GiS1vCSuHQI"
+    },
+    {
+      "title": "Paça çorbası kırığa iyi gelir mi?",
+      "youtube": "https://www.youtube.com/shorts/5BBymSEmgYI"
+    },
+    {
+      "title": "Bir ortopedist olarak ayakkabılarımı nasıl seçiyorum?",
+      "youtube": "https://www.youtube.com/shorts/vbA018_amQ8"
+    },
+    {
+      "title": "Kimlerin kalça protezine ihtiyacı olabilir?",
+      "youtube": "https://www.youtube.com/shorts/-EmWNt9BwXw"
+    },
+    {
+      "title": "Kapalı omuz ameliyatı gerçekten ne demek?",
+      "youtube": "https://www.youtube.com/shorts/vuxBY3HXHDU"
+    },
+    {
+      "title": "Diz protezi defterini açıyoruz",
+      "youtube": "https://www.youtube.com/shorts/V35a5ydYrfI"
+    },
+    {
+      "title": "Sen uzun yaşa, gerekirse protezi değiştiririz!",
+      "youtube": "https://www.youtube.com/shorts/iZyHed7SrPg"
+    },
+    {
+      "title": "Sabah parmaklarınız kilitleniyorsa dikkat!",
+      "youtube": "https://www.youtube.com/shorts/vAEfcLsrosE"
+    },
+    {
+      "title": "Basketbol tek başına boy uzatmaz!",
+      "youtube": "https://www.youtube.com/shorts/Z2kDfnK2dRg"
+    },
+    {
+      "title": "Evde çıplak ayakla mı, terlikle mi yürümeli?",
+      "youtube": "https://www.youtube.com/shorts/I3mTay0AAQg"
+    },
+    {
+      "title": "Başınız öne doğru eğikse bu video size göre",
+      "youtube": "https://www.youtube.com/shorts/PB6eedwPJAM"
+    },
+    {
+      "title": "Yastıksız uyumak boyun için daha mı sağlıklı?",
+      "youtube": "https://www.youtube.com/shorts/FbrMaw7wSw4"
+    },
+    {
+      "title": "Halı sahada sakatlanmaların asıl sebebi",
+      "youtube": "https://www.youtube.com/shorts/9e_HfKzJB_c"
+    },
+    {
+      "title": "Okul çantası seçerken nelere dikkat etmeli?",
+      "file": "assets/video/okul-cantasi.mp4",
+      "poster": "assets/video/okul-cantasi.jpg"
+    },
+    {
+      "title": "Omuz ameliyatları hakkında",
+      "file": "assets/video/omuz-ameliyatlari.mp4",
+      "poster": "assets/video/omuz-ameliyatlari.jpg"
+    }
+  ],
+  "infoSeries": [
+    {
+      "title": "30 Yaşından Sonra 5 Alışkanlık",
+      "images": [
+        {
+          "src": "assets/img/info/aliskanlik-0.webp",
+          "thumb": "assets/img/info/aliskanlik-0-sm.webp"
+        },
+        {
+          "src": "assets/img/info/aliskanlik-1.webp",
+          "thumb": "assets/img/info/aliskanlik-1-sm.webp"
+        },
+        {
+          "src": "assets/img/info/aliskanlik-2.webp",
+          "thumb": "assets/img/info/aliskanlik-2-sm.webp"
+        },
+        {
+          "src": "assets/img/info/aliskanlik-3.webp",
+          "thumb": "assets/img/info/aliskanlik-3-sm.webp"
+        },
+        {
+          "src": "assets/img/info/aliskanlik-4.webp",
+          "thumb": "assets/img/info/aliskanlik-4-sm.webp"
+        },
+        {
+          "src": "assets/img/info/aliskanlik-5.webp",
+          "thumb": "assets/img/info/aliskanlik-5-sm.webp"
+        }
+      ]
+    },
+    {
+      "title": "Bu 5 Hareketi Deneyin",
+      "images": [
+        {
+          "src": "assets/img/info/hareket-0.webp",
+          "thumb": "assets/img/info/hareket-0-sm.webp"
+        },
+        {
+          "src": "assets/img/info/hareket-1.webp",
+          "thumb": "assets/img/info/hareket-1-sm.webp"
+        },
+        {
+          "src": "assets/img/info/hareket-2.webp",
+          "thumb": "assets/img/info/hareket-2-sm.webp"
+        },
+        {
+          "src": "assets/img/info/hareket-3.webp",
+          "thumb": "assets/img/info/hareket-3-sm.webp"
+        },
+        {
+          "src": "assets/img/info/hareket-4.webp",
+          "thumb": "assets/img/info/hareket-4-sm.webp"
+        },
+        {
+          "src": "assets/img/info/hareket-5.webp",
+          "thumb": "assets/img/info/hareket-5-sm.webp"
+        },
+        {
+          "src": "assets/img/info/hareket-6.webp",
+          "thumb": "assets/img/info/hareket-6-sm.webp"
+        }
+      ]
+    },
+    {
+      "title": "Kırıkları Tanıyoruz",
+      "images": [
+        {
+          "src": "assets/img/info/kirik-0.webp",
+          "thumb": "assets/img/info/kirik-0-sm.webp"
+        },
+        {
+          "src": "assets/img/info/kirik-1.webp",
+          "thumb": "assets/img/info/kirik-1-sm.webp"
+        },
+        {
+          "src": "assets/img/info/kirik-2.webp",
+          "thumb": "assets/img/info/kirik-2-sm.webp"
+        },
+        {
+          "src": "assets/img/info/kirik-3.webp",
+          "thumb": "assets/img/info/kirik-3-sm.webp"
+        },
+        {
+          "src": "assets/img/info/kirik-4.webp",
+          "thumb": "assets/img/info/kirik-4-sm.webp"
+        }
+      ]
+    },
+    {
+      "title": "Ayakkabınız Ne Anlatıyor?",
+      "images": [
+        {
+          "src": "assets/img/info/ayakkabi-0.webp",
+          "thumb": "assets/img/info/ayakkabi-0-sm.webp"
+        },
+        {
+          "src": "assets/img/info/ayakkabi-1.webp",
+          "thumb": "assets/img/info/ayakkabi-1-sm.webp"
+        },
+        {
+          "src": "assets/img/info/ayakkabi-2.webp",
+          "thumb": "assets/img/info/ayakkabi-2-sm.webp"
+        },
+        {
+          "src": "assets/img/info/ayakkabi-3.webp",
+          "thumb": "assets/img/info/ayakkabi-3-sm.webp"
+        },
+        {
+          "src": "assets/img/info/ayakkabi-4.webp",
+          "thumb": "assets/img/info/ayakkabi-4-sm.webp"
+        },
+        {
+          "src": "assets/img/info/ayakkabi-5.webp",
+          "thumb": "assets/img/info/ayakkabi-5-sm.webp"
+        },
+        {
+          "src": "assets/img/info/ayakkabi-6.webp",
+          "thumb": "assets/img/info/ayakkabi-6-sm.webp"
+        }
+      ]
+    },
+    {
+      "title": "Masa Başı & Duruş",
+      "images": [
+        {
+          "src": "assets/img/info/durus-1.webp",
+          "thumb": "assets/img/info/durus-1-sm.webp"
+        },
+        {
+          "src": "assets/img/info/durus-2.webp",
+          "thumb": "assets/img/info/durus-2-sm.webp"
+        },
+        {
+          "src": "assets/img/info/durus-3.webp",
+          "thumb": "assets/img/info/durus-3-sm.webp"
+        },
+        {
+          "src": "assets/img/info/durus-4.webp",
+          "thumb": "assets/img/info/durus-4-sm.webp"
+        },
+        {
+          "src": "assets/img/info/durus-5.webp",
+          "thumb": "assets/img/info/durus-5-sm.webp"
+        }
+      ]
+    },
+    {
+      "title": "Kemik Sağlığı & Beslenme",
+      "images": [
+        {
+          "src": "assets/img/info/beslenme-0.webp",
+          "thumb": "assets/img/info/beslenme-0-sm.webp"
+        },
+        {
+          "src": "assets/img/info/beslenme-1.webp",
+          "thumb": "assets/img/info/beslenme-1-sm.webp"
+        },
+        {
+          "src": "assets/img/info/beslenme-2.webp",
+          "thumb": "assets/img/info/beslenme-2-sm.webp"
+        }
+      ]
+    }
+  ],
+  "gallery": [
+    {
+      "src": "assets/img/gallery/g01.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g02.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g03.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g04.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g05.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g06.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g07.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g08.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g09.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g10.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g11.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g12.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g13.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g14.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g15.webp",
+      "caption": "Ameliyathane"
+    },
+    {
+      "src": "assets/img/gallery/g16.webp",
+      "caption": "Ameliyathane"
+    }
+  ]
+}

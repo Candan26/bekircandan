@@ -73,6 +73,5 @@ Ayrıca alt bilgide "bilgilendirme amaçlıdır, tanı/tedavi yerine geçmez" uy
 
 ## 6. Teknik
 - Saf HTML/CSS/JS – derleme gerektirmez, GitHub Pages'te doğrudan çalışır
-- Tüm iletişim bilgileri `assets/js/main.js` en üstündeki `CONFIG` bloğundan değiştirilir
-- Video listesi `VIDEOS`, bilgi serileri `INFO` dizilerinden yönetilir
+- Düzenlenebilir tüm içerik (iletişim, videolar, bilgi serileri, galeri) `content.json` dosyasında; admin paneli bu dosyayı güncelleyecek
 - Görseller WebP'ye çevrildi (toplam ~6.6 MB), sayfada lazy-load

@@ -9,9 +9,8 @@ python -m http.server 5510
 Ardından http://localhost:5510 adresini açın.
 
 ## Düzenleme
-- **İletişim bilgileri** (telefon, WhatsApp, sosyal medya): `assets/js/main.js` → `CONFIG`
-- **Videolar**: `assets/js/main.js` → `VIDEOS` (YouTube ID veya yerel mp4)
-- **Bilgi Köşesi serileri**: `assets/js/main.js` → `INFO` + `assets/img/info/`
+- **İletişim, videolar, Bilgi Köşesi serileri, galeri**: kök dizindeki `content.json`
+  (YouTube videoları için tam link yeterli: `https://www.youtube.com/shorts/...`)
 - **Metinler / uzmanlık alanları**: `index.html`
 - **Renkler / tasarım**: `assets/css/style.css` → `:root`
 
