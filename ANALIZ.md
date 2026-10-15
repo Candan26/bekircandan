@@ -66,7 +66,7 @@ Ayrıca alt bilgide "bilgilendirme amaçlıdır, tanı/tedavi yerine geçmez" uy
 - [ ] Sık sorulan sorular (SSS) bölümü
 - [ ] Hasta yorumları (mevzuata uygun şekilde, Google yorumları linki)
 - [x] Logo entegrasyonu
-- [ ] Renk kararı: logo turkuaz, site vurgusu bordo (Instagram görselleriyle uyumlu) – turkuaza geçilsin mi?
+- [ ] Renk kararı: site logodaki turkuaza geçirildi; eski bordo `?renk=bordo` ile görülebilir. Bekir abinin seçimine göre biri kalıcı olacak (karşılaştırma kodu sonra kaldırılır)
 **Aşama 3 – Admin paneli (Cloudflare kararı verildi, feedback sonrasında yapılacak)**
 Amaç: sosyal medya uzmanı GitHub'a girmeden video ve görselleri kendisi güncelleyebilsin.
 - [x] İçerik `content.json`'a taşındı (videolar, bilgi serileri, galeri, iletişim)
