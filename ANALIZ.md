@@ -34,7 +34,7 @@
 | Logo + yatay menü (alt menülü) | ✅ Sabit (sticky) menü + mobil hamburger menü |
 | Büyük hero: doktor fotoğrafı + unvan + WhatsApp butonu | ✅ Hero: Doruk ofis fotoğrafı, unvan, uzmanlık etiketleri, Randevu + WhatsApp |
 | "Uzman Hizmet" ikon kartları | ✅ 6 uzmanlık kartı (özel çizilmiş ikonlar) + üstte 4 hızlı kart |
-| Hakkında – zaman çizelgesi (1993, 1999, 2004...) | ⚠️ Yapı hazır, **özgeçmiş bilgileri bekleniyor** |
+| Hakkında – zaman çizelgesi (1993, 1999, 2004...) | ✅ Özgeçmiş + zaman çizelgesi eklendi (yıllar isteğe bağlı) |
 | Çalışma saatleri kutusu | ❌ Bilgi yok (eklenecek) |
 | Ameliyat örnekleri + videolar | ✅ Video bölümü (15 video) + ameliyathane galerisi |
 | Online randevu formu | ✅ Form → WhatsApp'a hazır mesaj olarak gider (sunucu gerekmez) |
@@ -47,7 +47,8 @@
 ## 3. Eksik bilgiler – Bekir Bey'den istenecek ❗
 - [ ] **Telefon / WhatsApp numarası** (şu an "eklenecek" yazıyor; form da buna bağlı)
 - [ ] **Facebook** sayfa linki
-- [ ] **Özgeçmiş**: mezuniyet (okul/yıl), uzmanlık (kurum/yıl), önceki çalıştığı yerler, sertifika/kurslar, dernek üyelikleri
+- [x] **Özgeçmiş** geldi ve eklendi
+- [ ] (İsteğe bağlı) Özgeçmişe yıllar: tıp mezuniyeti, uzmanlık, her kurumda çalışma yılları; varsa sertifika/kurslar
 - [ ] Muayene / çalışma saatleri
 - [ ] E-posta adresi (isteğe bağlı)
 - [ ] Logo dosyası (postlarda görünen "Bangin Bekir Candan" logosu) – yüksek çözünürlüklü/PNG/SVG
@@ -60,7 +61,7 @@ Ayrıca alt bilgide "bilgilendirme amaçlıdır, tanı/tedavi yerine geçmez" uy
 ## 5. Yol haritası
 **Aşama 1 – Base (şimdi)** ✅ Tek sayfa, tüm bölümler, mobil uyumlu, GitHub Pages'te yayın
 **Aşama 2 – Feedback sonrası**
-- [ ] Eksik bilgilerin eklenmesi (telefon, özgeçmiş, saatler)
+- [ ] Eksik bilgilerin eklenmesi (telefon, saatler)
 - [ ] Her uzmanlık için ayrı detay sayfası (Diz protezi, Omuz artroskopisi, Halluks valgus... → SEO için kritik)
 - [ ] Sık sorulan sorular (SSS) bölümü
 - [ ] Hasta yorumları (mevzuata uygun şekilde, Google yorumları linki)
