@@ -49,7 +49,7 @@
 <div class="topbar">
   <div class="container topbar__inner">
     <div class="topbar__info">
-      <a data-tel href="#"><svg><use href="#i-phone"/></svg><span data-phone-text>Telefon</span></a>
+      <a data-tel href="#"><svg><use href="#i-phone"/></svg><span>Randevu Hattı:</span><span data-phone-text>Telefon</span></a>
       <span class="topbar__sep"></span>
       <span><svg><use href="#i-pin"/></svg>Doruk Nilüfer Hastanesi · Bursa</span>
       <span class="topbar__sep"></span>
@@ -78,7 +78,6 @@
       <a href="#uzmanlik">Uzmanlık Alanları</a>
       <a href="#videolar">Videolar</a>
       <a href="#bilgi">Bilgi Köşesi</a>
-      <a href="#galeri">Galeri</a>
       <a href="#iletisim">İletişim</a>
       <a href="#randevu" class="btn btn--primary nav__cta">Randevu Al</a>
     </nav>
@@ -93,7 +92,6 @@
     <div class="hero__bg" aria-hidden="true"></div>
     <div class="container hero__inner">
       <div class="hero__text reveal">
-        <p class="eyebrow">Bursa · Doruk Nilüfer Hastanesi</p>
         <h1><span class="hero__title-sm">Op. Dr.</span> Bangin Bekir <em>Candan</em></h1>
         <p class="hero__role">Ortopedi ve Travmatoloji Uzmanı</p>
         <ul class="hero__tags">
@@ -236,16 +234,6 @@
     </div>
   </section>
 
-  <!-- GALERİ -->
-  <section class="section" id="galeri">
-    <div class="container">
-      <div class="section__head reveal">
-        <p class="eyebrow">Galeri</p>
-        <h2 class="h2">Ameliyathaneden kareler</h2>
-      </div>
-      <div class="gallery" id="gallery"></div>
-    </div>
-  </section>
 
   <!-- RANDEVU -->
   <section class="section appt" id="randevu">
@@ -253,7 +241,7 @@
       <div class="appt__info reveal">
         <p class="eyebrow eyebrow--light">Online Randevu</p>
         <h2 class="h2">Randevu talebinizi iletin, size dönüş yapalım.</h2>
-        <p>Formu doldurduğunuzda bilgileriniz WhatsApp üzerinden iletilir. Dilerseniz doğrudan arayabilir veya hastanenin çağrı merkezinden randevu alabilirsiniz.</p>
+        <p>Formu doldurduğunuzda bilgileriniz WhatsApp üzerinden iletilir. Dilerseniz Doruk Hastanesi randevu hattını arayarak da randevu alabilirsiniz.</p>
         <ul class="appt__list">
           <li><svg><use href="#i-check"/></svg>Muayene ve kontrol randevusu</li>
           <li><svg><use href="#i-check"/></svg>Ameliyat öncesi değerlendirme</li>
@@ -261,8 +249,7 @@
         </ul>
         <p class="appt__hours"><svg><use href="#i-clock"/></svg><span><strong>Çalışma saatleri:</strong> <span data-hours>Pazartesi – Cumartesi, 09.00 – 18.00</span></span></p>
         <div class="appt__quick">
-          <a data-tel href="#" class="btn btn--light"><svg><use href="#i-phone"/></svg> <span data-phone-text>Ara</span></a>
-          <a href="tel:4440455" class="btn btn--outline-light">Doruk Çağrı Merkezi · 444 0 455</a>
+          <a data-tel href="#" class="btn btn--light"><svg><use href="#i-phone"/></svg> <span data-phone-label>Randevu Hattı</span> · <span data-phone-text>Ara</span></a>
         </div>
       </div>
       <form class="form reveal" id="apptForm" novalidate>
@@ -301,7 +288,7 @@
       </div>
       <div class="contact">
         <div class="contact__cards">
-          <a data-tel href="#" class="ccard reveal"><span class="ccard__ic"><svg><use href="#i-phone"/></svg></span><div><small>Telefon</small><strong data-phone-text>—</strong></div></a>
+          <a data-tel href="#" class="ccard reveal"><span class="ccard__ic"><svg><use href="#i-phone"/></svg></span><div><small data-phone-label>Randevu Hattı</small><strong data-phone-text>—</strong></div></a>
           <a data-wa href="#" class="ccard reveal" target="_blank" rel="noopener"><span class="ccard__ic ccard__ic--wa"><svg><use href="#i-wa"/></svg></span><div><small>WhatsApp</small><strong>Mesaj gönderin</strong></div></a>
           <a data-email href="#" class="ccard reveal"><span class="ccard__ic"><svg><use href="#i-mail"/></svg></span><div><small>E-posta</small><strong data-email-text>—</strong></div></a>
           <a data-link="instagram" class="ccard reveal" target="_blank" rel="noopener"><span class="ccard__ic ccard__ic--ig"><svg><use href="#i-ig"/></svg></span><div><small>Instagram</small><strong>@op.dr.banginbekircandan</strong></div></a>
@@ -335,7 +322,7 @@
     <div>
       <h4>İletişim</h4>
       <ul>
-        <li><a data-tel href="#" data-phone-text>—</a></li>
+        <li><a data-tel href="#">Randevu Hattı: <span data-phone-text>—</span></a></li>
         <li><a data-email href="#" data-email-text>—</a></li>
         <li><span data-hours>Pazartesi – Cumartesi, 09.00 – 18.00</span></li>
         <li>Doruk Nilüfer Hastanesi<br>Lefkoşe Cd. No:22, Nilüfer / Bursa</li>

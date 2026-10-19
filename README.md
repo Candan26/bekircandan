@@ -9,7 +9,7 @@ python -m http.server 5510
 Ardından http://localhost:5510 adresini açın.
 
 ## Düzenleme
-- **İletişim, videolar, Bilgi Köşesi serileri, galeri**: kök dizindeki `content.json`
+- **İletişim, videolar, Bilgi Köşesi serileri**: kök dizindeki `content.json`
   (YouTube videoları için tam link yeterli: `https://www.youtube.com/shorts/...`)
 - **Metinler / uzmanlık alanları**: `index.html`
 - **Renkler / tasarım**: `assets/css/style.css` → `:root`

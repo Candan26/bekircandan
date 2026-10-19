@@ -1,8 +1,9 @@
 {
   "_not": "Bu dosya sitedeki düzenlenebilir içeriği tutar. Admin paneli bu dosyayı günceller.",
   "contact": {
-    "phone": "",
-    "phoneText": "",
+    "phone": "4440455",
+    "phoneText": "444 0 455",
+    "phoneLabel": "Doruk Randevu Hattı",
     "whatsapp": "",
     "email": "bbekircandan@hotmail.com",
     "hours": "Pazartesi – Cumartesi, 09.00 – 18.00",
@@ -239,72 +240,6 @@
           "thumb": "assets/img/info/beslenme-2-sm.webp"
         }
       ]
-    }
-  ],
-  "gallery": [
-    {
-      "src": "assets/img/gallery/g01.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g02.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g03.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g04.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g05.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g06.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g07.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g08.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g09.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g10.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g11.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g12.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g13.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g14.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g15.webp",
-      "caption": "Ameliyathane"
-    },
-    {
-      "src": "assets/img/gallery/g16.webp",
-      "caption": "Ameliyathane"
     }
   ]
 }

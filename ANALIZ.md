@@ -36,7 +36,7 @@
 | "Uzman Hizmet" ikon kartları | ✅ 6 uzmanlık kartı (özel çizilmiş ikonlar) + üstte 4 hızlı kart |
 | Hakkında – zaman çizelgesi (1993, 1999, 2004...) | ✅ Özgeçmiş + zaman çizelgesi eklendi (yıllar isteğe bağlı) |
 | Çalışma saatleri kutusu | ✅ Pzt–Cmt 09.00–18.00 (üst şerit, randevu, iletişim, alt bilgi) |
-| Ameliyat örnekleri + videolar | ✅ Video bölümü (15 video) + ameliyathane galerisi |
+| Ameliyat örnekleri + videolar | ✅ Video bölümü (15 video). Ameliyathane galerisi mevzuat nedeniyle kaldırıldı |
 | Online randevu formu | ✅ Form → WhatsApp'a hazır mesaj olarak gider (sunucu gerekmez) |
 | İletişim + Google harita | ✅ İletişim kartları + Doruk Nilüfer Hastanesi haritası |
 | Sabit WhatsApp butonu | ✅ WhatsApp + Ara butonu |
@@ -45,7 +45,9 @@
 **Farklılaştırma:** Örnek site turkuaz/gri ve oldukça sade. Bizde Bekir Bey'in Instagram görsellerindeki **bordo + lacivert** kimlik kullanıldı (marka bütünlüğü), başlıklarda postlardaki kalın/dar font stili (Oswald), yumuşak animasyonlar, "Bilgi Köşesi" seri sekmeleri ve tam ekran görsel görüntüleyici eklendi.
 
 ## 3. Eksik bilgiler – Bekir Bey'den istenecek ❗
-- [ ] **Telefon / WhatsApp numarası** (şu an "eklenecek" yazıyor; form da buna bağlı)
+- [x] Telefon: Doruk randevu hattı 444 0 455 kullanılıyor
+- [ ] **WhatsApp için cep numarası** (randevu hattı WhatsApp'ta çalışmaz; WhatsApp butonları ve randevu formu buna bağlı. Numara olmayacaksa WhatsApp butonları kaldırılıp form başka yere yönlendirilmeli)
+- [ ] Hakkımda için güncel fotoğraf (Kübra Hanım gönderecek)
 - [ ] **Facebook** sayfa linki
 - [x] **Özgeçmiş** geldi ve eklendi
 - [ ] (İsteğe bağlı) Özgeçmişe yıllar: tıp mezuniyeti, uzmanlık, her kurumda çalışma yılları; varsa sertifika/kurslar
@@ -58,7 +60,16 @@
 Notlardaki "Bursa'da en iyi benim", "Bursa'da layıkıyla yapan 4 kişiden biri" gibi **karşılaştırmalı üstünlük ifadeleri siteye konmadı.** Sağlık Bakanlığı'nın sağlık hizmetleri tanıtım/reklam düzenlemeleri ve Türk Tabipleri Birliği etik kuralları hekimlerin kendini diğerlerinden üstün gösteren ifadeler kullanmasını yasaklıyor; şikâyet/ceza riski var. Bunun yerine deneyimi anlatan nötr ifadeler kullanılabilir (ör. "omuz ve ayak bileği artroskopisinde yoğun deneyim").
 Ayrıca alt bilgide "bilgilendirme amaçlıdır, tanı/tedavi yerine geçmez" uyarısı ve formda KVKK onayı eklendi.
 
-## 5. Yol haritası
+## 5. Feedback turları
+**1. tur – Kübra Hanım (sosyal medya), 19.10.2026**
+- [x] Ameliyathane galerisi tamamen kaldırıldı (mevzuat). Fotoğraflar repodan da silindi
+- [x] Hero'daki hareketli kart yüzü kapatıyordu → fotoğrafın orta hizasına alındı
+- [x] Hero'daki tekrar eden "Bursa · Doruk Nilüfer Hastanesi" satırı kaldırıldı (konum kartı zaten gösteriyor)
+- [x] "Doruk Çağrı Merkezi" butonu yerine telefon alanında "Doruk Randevu Hattı · 444 0 455"
+- [ ] Hakkımda fotoğrafı: güncel fotoğraf bekleniyor
+- [ ] SEO içerikleri: her tedavi için Google'ın indeksleyeceği içerik sayfaları (Google Ads'e çıkılacak) → yapay zekayla yazılacak, hoca onaylayacak
+
+## 6. Yol haritası
 **Aşama 1 – Base (şimdi)** ✅ Tek sayfa, tüm bölümler, mobil uyumlu, GitHub Pages'te yayın
 **Aşama 2 – Feedback sonrası**
 - [ ] Eksik bilgilerin eklenmesi (telefon/WhatsApp, Facebook)
@@ -69,14 +80,13 @@ Ayrıca alt bilgide "bilgilendirme amaçlıdır, tanı/tedavi yerine geçmez" uy
 - [ ] Renk kararı: site logodaki turkuaza geçirildi; eski bordo `?renk=bordo` ile görülebilir. Bekir abinin seçimine göre biri kalıcı olacak (karşılaştırma kodu sonra kaldırılır)
 **Aşama 3 – Admin paneli (Cloudflare kararı verildi, feedback sonrasında yapılacak)**
 Amaç: sosyal medya uzmanı GitHub'a girmeden video ve görselleri kendisi güncelleyebilsin.
-- [x] İçerik `content.json`'a taşındı (videolar, bilgi serileri, galeri, iletişim)
+- [x] İçerik `content.json`'a taşındı (videolar, bilgi serileri, iletişim)
 - [ ] Çağrı: ücretsiz Cloudflare hesabı açıp GitHub (Candan26) bağlantısını yapacak
 - [ ] Siteyi Cloudflare Pages'e taşı (GitHub'a her push'ta otomatik yayın); istenirse repo private
 - [ ] `/admin` sayfası: Türkçe, mobil uyumlu, kullanıcı adı + şifre ile giriş
 - [ ] Sunucu fonksiyonu (Pages Functions): şifre kontrolü + oturum çerezi; GitHub anahtarı sadece Cloudflare'de gizli değişken olarak durur
 - [ ] Videolar: YouTube linki yapıştır → ekle / sil / sırala
 - [ ] Bilgi Köşesi: seri ekle / sil, seriye görsel yükle (otomatik küçültme + WebP)
-- [ ] Galeri: fotoğraf ekle / sil
 - [ ] "Yayınla" → değişiklik repoya commit edilir, site 1–2 dk'da güncellenir (her değişiklik geri alınabilir)
 - [ ] İsteğe bağlı: iletişim bilgileri ve çalışma saatleri de panelden düzenlensin
 
@@ -86,7 +96,7 @@ Amaç: sosyal medya uzmanı GitHub'a girmeden video ve görselleri kendisi günc
 - [ ] Randevu formunu e-postaya da düşürme (Formspree vb.)
 - [ ] İngilizce dil seçeneği (istenirse)
 
-## 6. Teknik
+## 7. Teknik
 - Saf HTML/CSS/JS – derleme gerektirmez, GitHub Pages'te doğrudan çalışır
-- Düzenlenebilir tüm içerik (iletişim, videolar, bilgi serileri, galeri) `content.json` dosyasında; admin paneli bu dosyayı güncelleyecek
+- Düzenlenebilir tüm içerik (iletişim, videolar, bilgi serileri) `content.json` dosyasında; admin paneli bu dosyayı güncelleyecek
 - Görseller WebP'ye çevrildi (toplam ~6.6 MB), sayfada lazy-load

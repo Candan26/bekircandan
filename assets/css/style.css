@@ -187,7 +187,8 @@ button { font: inherit; cursor: pointer; }
 .hero__card strong { display: block; color: var(--navy); }
 .hero__card span { color: var(--muted); }
 .hero__card--a { left: -36px; bottom: 70px; }
-.hero__card--b { right: -28px; top: 90px; animation-delay: -3s; }
+/* Kartlar yüzü kapatmasın: sağdaki kart fotoğrafın orta hizasında (omuz/kol seviyesi) */
+.hero__card--b { right: -28px; top: 50%; animation-delay: -3s; }
 .hero__card--b svg { background: var(--sky); color: var(--navy); }
 @keyframes float { 50% { transform: translateY(-8px); } }
 
@@ -298,15 +299,6 @@ button { font: inherit; cursor: pointer; }
 .info-card img { width: 100%; height: 100%; object-fit: cover; }
 .info-card:hover { transform: translateY(-5px) rotate(-.4deg); box-shadow: var(--shadow-lg); }
 @keyframes pop { from { opacity: 0; transform: translateY(14px); } }
-
-/* ---------- Gallery ---------- */
-.gallery { columns: 4 240px; column-gap: 16px; }
-.gallery button {
-  display: block; width: 100%; margin: 0 0 16px; padding: 0; border: 0; border-radius: 14px; overflow: hidden;
-  break-inside: avoid; background: var(--sky); position: relative;
-}
-.gallery img { width: 100%; transition: transform .5s, filter .5s; }
-.gallery button:hover img { transform: scale(1.04); filter: saturate(1.1); }
 
 /* ---------- Appointment ---------- */
 .appt { background: linear-gradient(135deg, var(--navy-deep), var(--navy) 55%, var(--appt-end)); color: #dfe6f7; overflow: hidden; }
@@ -447,7 +439,7 @@ button { font: inherit; cursor: pointer; }
   .hero__card { font-size: .76rem; padding: 9px 12px; }
   .hero__card svg { width: 28px; height: 28px; padding: 5px; }
   .hero__card--a { left: -14px; bottom: 40px; }
-  .hero__card--b { right: -14px; top: 40px; }
+  .hero__card--b { right: -14px; top: 52%; }
   .hero__cta .btn { flex: 1 1 100%; }
   .highlights__grid { grid-template-columns: 1fr; }
   .hl { padding: 16px; }
@@ -458,8 +450,6 @@ button { font: inherit; cursor: pointer; }
   .tabs::-webkit-scrollbar { display: none; }
   .tab { flex: none; scroll-snap-align: start; font-size: .85rem; padding: 9px 15px; }
   .info-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .gallery { columns: 2; column-gap: 10px; }
-  .gallery button { margin-bottom: 10px; }
   .form__row, .contact__cards { grid-template-columns: 1fr; }
   .contact__map iframe { height: 320px; }
   .ccard--wide { grid-column: auto; }

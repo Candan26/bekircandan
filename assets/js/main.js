@@ -1,5 +1,5 @@
 /* ==========================================================
-   Düzenlenebilir içerik (iletişim, videolar, bilgi serileri, galeri)
+   Düzenlenebilir içerik (iletişim, videolar, bilgi serileri)
    kök dizindeki content.json dosyasından okunur.
    ========================================================== */
 
@@ -8,7 +8,8 @@ const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 let CONTACT = {};
-const waNumber = () => (CONTACT.whatsapp || CONTACT.phone || '').replace(/\D/g, '');
+// WhatsApp için ayrı cep numarası gerekir; randevu hattı (444 …) WhatsApp'ta çalışmaz
+const waNumber = () => (CONTACT.whatsapp || '').replace(/\D/g, '');
 const waLink = (text = '') => {
   const n = waNumber();
   const q = text ? `?text=${encodeURIComponent(text)}` : '';
@@ -24,8 +25,11 @@ const youtubeId = v => {
 function applyContact(c) {
   CONTACT = c || {};
   const phone = (CONTACT.phone || '').replace(/\D/g, '');
-  $$('[data-tel]').forEach(a => { a.href = phone ? `tel:+${phone}` : '#iletisim'; });
+  // Ülke koduyla yazılmış numaraya + eklenir; 444'lü hatlar olduğu gibi aranır
+  const tel = phone.startsWith('90') && phone.length === 12 ? `+${phone}` : phone;
+  $$('[data-tel]').forEach(a => { a.href = tel ? `tel:${tel}` : '#iletisim'; });
   $$('[data-phone-text]').forEach(el => { el.textContent = CONTACT.phoneText || 'Telefon (eklenecek)'; });
+  $$('[data-phone-label]').forEach(el => { if (CONTACT.phoneLabel) el.textContent = CONTACT.phoneLabel; });
   $$('[data-wa]').forEach(a => {
     a.href = waLink('Merhaba, randevu almak istiyorum.');
     if (waNumber()) a.target = '_blank'; else a.removeAttribute('target');
@@ -182,22 +186,6 @@ function renderInfoTabs(seriesList) {
   });
 }
 
-/* ---------- Galeri ---------- */
-const galleryEl = $('#gallery');
-function renderGallery(gallery) {
-  galleryEl.innerHTML = '';
-  const items = (gallery || []).map(g => ({ src: g.src, cap: g.caption || 'Galeri' }));
-  $('#galeri').hidden = !items.length;
-  items.forEach((it, i) => {
-    const b = document.createElement('button');
-    b.type = 'button'; b.className = 'reveal';
-    b.setAttribute('aria-label', `Galeri görseli ${i + 1}`);
-    b.innerHTML = `<img src="${esc(it.src)}" alt="${esc(it.cap)} ${i + 1}" loading="lazy">`;
-    b.addEventListener('click', () => lbOpen(items, i));
-    galleryEl.append(b);
-  });
-}
-
 /* ---------- Randevu formu → WhatsApp ---------- */
 const form = $('#apptForm'), msg = $('#formMsg');
 form.addEventListener('submit', e => {
@@ -233,7 +221,6 @@ fetch('content.json', { cache: 'no-cache' })
     applyContact(c.contact);
     renderVideos(c.videos, c.videosInitial || 10);
     renderInfoTabs(c.infoSeries);
-    renderGallery(c.gallery);
     observeReveals();
   })
   .catch(err => console.error('content.json yüklenemedi:', err));
