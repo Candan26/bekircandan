@@ -67,13 +67,15 @@ Ayrıca alt bilgide "bilgilendirme amaçlıdır, tanı/tedavi yerine geçmez" uy
 - [x] Hero'daki tekrar eden "Bursa · Doruk Nilüfer Hastanesi" satırı kaldırıldı (konum kartı zaten gösteriyor)
 - [x] "Doruk Çağrı Merkezi" butonu yerine telefon alanında "Doruk Randevu Hattı · 444 0 455"
 - [x] Hakkımda fotoğrafı güncellendi (20.10.2026)
-- [ ] SEO içerikleri: her tedavi için Google'ın indeksleyeceği içerik sayfaları (Google Ads'e çıkılacak) → yapay zekayla yazılacak, hoca onaylayacak
+- [x] SEO içerikleri: 26 tedavi sayfası yazıldı (`content/tedaviler/`), sayfa üretici `tools/build.py` hazır
+- [ ] **Hoca onayı:** `_inceleme/tedavi-sayfalari-inceleme.pdf` gönderilecek; onaylanan sayfalar `onay: evet` yapılıp yayına alınacak. Çalışma `seo-sayfalar` dalında, onaya kadar GitHub'a gönderilmiyor
+- [ ] Yayın sonrası: Google Search Console'a sitemap gönderimi (alan adı bağlandıktan sonra), Google Ads açılış sayfaları olarak tedavi sayfalarının kullanılması
 
 ## 6. Yol haritası
 **Aşama 1 – Base (şimdi)** ✅ Tek sayfa, tüm bölümler, mobil uyumlu, GitHub Pages'te yayın
 **Aşama 2 – Feedback sonrası**
 - [ ] Eksik bilgilerin eklenmesi (telefon/WhatsApp, Facebook)
-- [ ] Her uzmanlık için ayrı detay sayfası (Diz protezi, Omuz artroskopisi, Halluks valgus... → SEO için kritik)
+- [x] Her uzmanlık için ayrı detay sayfası (26 sayfa, hoca onayı bekliyor)
 - [ ] Sık sorulan sorular (SSS) bölümü
 - [ ] Hasta yorumları (mevzuata uygun şekilde, Google yorumları linki)
 - [x] Logo entegrasyonu

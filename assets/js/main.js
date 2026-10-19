@@ -7,13 +7,15 @@
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+// Alt sayfalarda (ör. tedaviler/diz-protezi/) kök dizine göre yol: <html data-root="../../">
+const ROOT = document.documentElement.dataset.root || '';
 let CONTACT = {};
 // WhatsApp için ayrı cep numarası gerekir; randevu hattı (444 …) WhatsApp'ta çalışmaz
 const waNumber = () => (CONTACT.whatsapp || '').replace(/\D/g, '');
 const waLink = (text = '') => {
   const n = waNumber();
   const q = text ? `?text=${encodeURIComponent(text)}` : '';
-  return n ? `https://wa.me/${n}${q}` : '#randevu';
+  return n ? `https://wa.me/${n}${q}` : `${ROOT}#randevu`;
 };
 // YouTube linkinden (shorts, watch, youtu.be) ya da düz ID'den video ID'si çıkarır
 const youtubeId = v => {
@@ -27,14 +29,14 @@ function applyContact(c) {
   const phone = (CONTACT.phone || '').replace(/\D/g, '');
   // Ülke koduyla yazılmış numaraya + eklenir; 444'lü hatlar olduğu gibi aranır
   const tel = phone.startsWith('90') && phone.length === 12 ? `+${phone}` : phone;
-  $$('[data-tel]').forEach(a => { a.href = tel ? `tel:${tel}` : '#iletisim'; });
+  $$('[data-tel]').forEach(a => { a.href = tel ? `tel:${tel}` : `${ROOT}#iletisim`; });
   $$('[data-phone-text]').forEach(el => { el.textContent = CONTACT.phoneText || 'Telefon (eklenecek)'; });
   $$('[data-phone-label]').forEach(el => { if (CONTACT.phoneLabel) el.textContent = CONTACT.phoneLabel; });
   $$('[data-wa]').forEach(a => {
     a.href = waLink('Merhaba, randevu almak istiyorum.');
     if (waNumber()) a.target = '_blank'; else a.removeAttribute('target');
   });
-  $$('[data-email]').forEach(a => { a.href = CONTACT.email ? `mailto:${CONTACT.email}` : '#iletisim'; });
+  $$('[data-email]').forEach(a => { a.href = CONTACT.email ? `mailto:${CONTACT.email}` : `${ROOT}#iletisim`; });
   $$('[data-email-text]').forEach(el => { el.textContent = CONTACT.email || 'E-posta (eklenecek)'; });
   $$('[data-hours]').forEach(el => {
     const h = el.dataset.hours === 'short' ? (CONTACT.hoursShort || CONTACT.hours) : CONTACT.hours;
@@ -42,7 +44,7 @@ function applyContact(c) {
   });
   $$('[data-link]').forEach(a => {
     const url = CONTACT[a.dataset.link];
-    if (url) { a.href = url; a.target = '_blank'; } else { a.href = '#iletisim'; a.removeAttribute('target'); }
+    if (url) { a.href = url; a.target = '_blank'; } else { a.href = `${ROOT}#iletisim`; a.removeAttribute('target'); }
   });
 }
 $('#year').textContent = new Date().getFullYear();
@@ -108,6 +110,7 @@ function videoCard(v) {
   return el;
 }
 function renderVideos(videos, initial = 10) {
+  if (!videosEl) return;
   videosEl.innerHTML = '';
   const list = (videos || []).filter(v => youtubeId(v.youtube) || v.file);
   list.forEach((v, i) => {
@@ -137,25 +140,27 @@ function lbOpen(items, i) {
   $('.lb__close', lb).focus();
 }
 function lbClose() { lb.hidden = true; document.body.style.overflow = ''; lbImg.removeAttribute('src'); }
-$('.lb__close', lb).addEventListener('click', lbClose);
-$('.lb__prev', lb).addEventListener('click', () => lbShow(lbIndex - 1));
-$('.lb__next', lb).addEventListener('click', () => lbShow(lbIndex + 1));
-lb.addEventListener('click', e => { if (e.target === lb) lbClose(); });
-addEventListener('keydown', e => {
-  if (lb.hidden) return;
-  if (e.key === 'Escape') lbClose();
-  if (e.key === 'ArrowLeft') lbShow(lbIndex - 1);
-  if (e.key === 'ArrowRight') lbShow(lbIndex + 1);
-});
-// Mobilde kaydırma
-let tx = null;
-lb.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
-lb.addEventListener('touchend', e => {
-  if (tx === null) return;
-  const dx = e.changedTouches[0].clientX - tx;
-  if (Math.abs(dx) > 50) lbShow(lbIndex + (dx < 0 ? 1 : -1));
-  tx = null;
-});
+if (lb) {
+  $('.lb__close', lb).addEventListener('click', lbClose);
+  $('.lb__prev', lb).addEventListener('click', () => lbShow(lbIndex - 1));
+  $('.lb__next', lb).addEventListener('click', () => lbShow(lbIndex + 1));
+  lb.addEventListener('click', e => { if (e.target === lb) lbClose(); });
+  addEventListener('keydown', e => {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') lbClose();
+    if (e.key === 'ArrowLeft') lbShow(lbIndex - 1);
+    if (e.key === 'ArrowRight') lbShow(lbIndex + 1);
+  });
+  // Mobilde kaydırma
+  let tx = null;
+  lb.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', e => {
+    if (tx === null) return;
+    const dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 50) lbShow(lbIndex + (dx < 0 ? 1 : -1));
+    tx = null;
+  });
+}
 
 /* ---------- Bilgi köşesi ---------- */
 const tabsEl = $('#infoTabs'), gridEl = $('#infoGrid');
@@ -174,6 +179,7 @@ function renderInfo(series, tab) {
   });
 }
 function renderInfoTabs(seriesList) {
+  if (!tabsEl) return;
   tabsEl.innerHTML = '';
   const list = (seriesList || []).filter(s => s.images?.length);
   $('#bilgi').hidden = !list.length;
@@ -188,34 +194,36 @@ function renderInfoTabs(seriesList) {
 
 /* ---------- Randevu formu → WhatsApp ---------- */
 const form = $('#apptForm'), msg = $('#formMsg');
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  let ok = true;
-  $$('[required]', form).forEach(f => {
-    const bad = f.type === 'checkbox' ? !f.checked : !f.value.trim();
-    f.classList.toggle('is-invalid', bad);
-    if (bad) ok = false;
+if (form) {
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    let ok = true;
+    $$('[required]', form).forEach(f => {
+      const bad = f.type === 'checkbox' ? !f.checked : !f.value.trim();
+      f.classList.toggle('is-invalid', bad);
+      if (bad) ok = false;
+    });
+    if (!ok) { msg.textContent = 'Lütfen zorunlu alanları doldurun.'; return; }
+    const d = Object.fromEntries(new FormData(form));
+    const text = [
+      'Merhaba, web sitesi üzerinden randevu talebi:',
+      `Ad Soyad: ${d.ad}`,
+      `Telefon: ${d.tel}`,
+      `Konu: ${d.konu}`,
+      d.gun ? `Tercih edilen gün: ${d.gun.split('-').reverse().join('.')}` : '',
+      d.mesaj ? `Mesaj: ${d.mesaj}` : '',
+    ].filter(Boolean).join('\n');
+    if (!waNumber()) { msg.textContent = 'WhatsApp numarası henüz tanımlanmadı.'; return; }
+    msg.textContent = 'WhatsApp açılıyor…';
+    window.open(waLink(text), '_blank', 'noopener');
   });
-  if (!ok) { msg.textContent = 'Lütfen zorunlu alanları doldurun.'; return; }
-  const d = Object.fromEntries(new FormData(form));
-  const text = [
-    'Merhaba, web sitesi üzerinden randevu talebi:',
-    `Ad Soyad: ${d.ad}`,
-    `Telefon: ${d.tel}`,
-    `Konu: ${d.konu}`,
-    d.gun ? `Tercih edilen gün: ${d.gun.split('-').reverse().join('.')}` : '',
-    d.mesaj ? `Mesaj: ${d.mesaj}` : '',
-  ].filter(Boolean).join('\n');
-  if (!waNumber()) { msg.textContent = 'WhatsApp numarası henüz tanımlanmadı.'; return; }
-  msg.textContent = 'WhatsApp açılıyor…';
-  window.open(waLink(text), '_blank', 'noopener');
-});
-$$('input, textarea, select', form).forEach(f => f.addEventListener('input', () => f.classList.remove('is-invalid')));
+  $$('input, textarea, select', form).forEach(f => f.addEventListener('input', () => f.classList.remove('is-invalid')));
+}
 
 /* ---------- İçeriği yükle ---------- */
 applyContact({});
 observeReveals();
-fetch('content.json', { cache: 'no-cache' })
+fetch(`${ROOT}content.json`, { cache: 'no-cache' })
   .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
   .then(c => {
     applyContact(c.contact);

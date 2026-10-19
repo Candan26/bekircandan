@@ -21,6 +21,7 @@
 </head>
 <body>
 
+<!-- SHARED:ICONS:START (tools/build.py alt sayfalara kopyalar) -->
 <!-- İkon seti -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
@@ -44,7 +45,9 @@
     <symbol id="s-hip" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8c4 2 8 2 12 0 2 6 1 11-3 15"/><circle cx="20" cy="22" r="5"/><path d="m24 25 6 4 3 15M36 44l-3-15"/><path d="M42 8c-4 2-8 2-12 0" opacity=".55"/></g></symbol>
   </defs>
 </svg>
+<!-- SHARED:ICONS:END -->
 
+<!-- SHARED:HEADER:START -->
 <!-- Üst bilgi şeridi -->
 <div class="topbar">
   <div class="container topbar__inner">
@@ -84,6 +87,7 @@
     <button class="burger" id="burger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
   </div>
 </header>
+<!-- SHARED:HEADER:END -->
 
 <main id="top">
 
@@ -172,6 +176,7 @@
         <h2 class="h2">Tedavi ve cerrahi hizmetler</h2>
         <p class="lead">Omuz, diz, kalça, el ve ayak problemleri; spor yaralanmaları, kırıklar ve eklem kireçlenmesine yönelik tedaviler.</p>
       </div>
+      <!-- SERVICES:START (tools/build.py üretir; elle düzenlemeyin, content/tedaviler/*.md dosyalarını düzenleyin) -->
       <div class="services">
         <article class="svc reveal">
           <div class="svc__icon"><svg><use href="#s-knee"/></svg></div>
@@ -204,6 +209,7 @@
           <ul><li>Kalça avasküler nekrozu (AVN)</li><li>Omuz çıkığı</li><li>Travmatik dirsek çıkığı</li></ul>
         </article>
       </div>
+      <!-- SERVICES:END -->
     </div>
   </section>
 
@@ -312,6 +318,7 @@
   </section>
 </main>
 
+<!-- SHARED:FOOTER:START -->
 <footer class="footer">
   <div class="container footer__grid">
     <div>
@@ -348,6 +355,8 @@
   <a data-tel href="#" class="float__btn float__btn--call" aria-label="Ara"><svg><use href="#i-phone"/></svg></a>
   <a data-wa href="#" class="float__btn float__btn--wa" aria-label="WhatsApp" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg></a>
 </div>
+
+<!-- SHARED:FOOTER:END -->
 
 <!-- Lightbox -->
 <div class="lb" id="lb" hidden>
