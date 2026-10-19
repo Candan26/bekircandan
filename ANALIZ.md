@@ -46,7 +46,7 @@
 
 ## 3. Eksik bilgiler – Bekir Bey'den istenecek ❗
 - [x] Telefon: Doruk randevu hattı 444 0 455 kullanılıyor
-- [ ] **WhatsApp için cep numarası** (randevu hattı WhatsApp'ta çalışmaz; WhatsApp butonları ve randevu formu buna bağlı. Numara olmayacaksa WhatsApp butonları kaldırılıp form başka yere yönlendirilmeli)
+- [x] WhatsApp: +90 545 545 91 09 (Bekir abinin cep numarası; sitede yazı olarak görünmez, sadece WhatsApp butonları ve randevu formu kullanır)
 - [ ] Hakkımda için güncel fotoğraf (Kübra Hanım gönderecek)
 - [ ] **Facebook** sayfa linki
 - [x] **Özgeçmiş** geldi ve eklendi
