@@ -357,8 +357,20 @@ button { font: inherit; cursor: pointer; }
 
 /* ---------- Tedavi sayfaları (tools/build.py) ---------- */
 .services__more { margin-top: 32px; text-align: center; }
-.svc li a { color: inherit; border-bottom: 1px dashed rgba(var(--accent-rgb), .6); transition: color .2s, border-color .2s; }
-.svc li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+/* Tedavi linkleri: satır gibi tıklanabilir; sağdaki ok telefonda da tıklanabilir olduğunu gösterir */
+.svc li a {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  margin: -4px -8px; padding: 4px 8px; border-radius: 10px; color: inherit;
+  transition: background .2s, color .2s;
+}
+.svc li a::after {
+  content: ""; flex: none; width: 7px; height: 7px; margin-right: 4px;
+  border-top: 2px solid var(--accent); border-right: 2px solid var(--accent);
+  transform: rotate(45deg); opacity: .45; transition: transform .2s, opacity .2s;
+}
+.svc li a:hover, .svc li a:focus-visible { background: var(--accent-soft); color: var(--accent); }
+.svc li a:hover::after, .svc li a:focus-visible::after { opacity: 1; transform: translateX(3px) rotate(45deg); }
+.svc li a:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
 .draft-banner { background: #fff4d6; color: #7a5200; text-align: center; padding: 10px 16px; font-weight: 700; font-size: .9rem; }
 .page-hero { background: linear-gradient(180deg, #f3f7fc, #fff); padding: clamp(32px, 5vw, 56px) 0 clamp(28px, 4vw, 44px); border-bottom: 1px solid var(--line); }
 .crumbs { display: flex; flex-wrap: wrap; gap: 8px; font-size: .85rem; color: var(--muted); font-weight: 600; }
