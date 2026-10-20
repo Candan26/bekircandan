@@ -68,7 +68,7 @@ Ayrıca alt bilgide "bilgilendirme amaçlıdır, tanı/tedavi yerine geçmez" uy
 - [x] "Doruk Çağrı Merkezi" butonu yerine telefon alanında "Doruk Randevu Hattı · 444 0 455"
 - [x] Hakkımda fotoğrafı güncellendi (20.10.2026)
 - [x] SEO içerikleri: 26 tedavi sayfası yazıldı (`content/tedaviler/`), sayfa üretici `tools/build.py` hazır
-- [ ] **Hoca onayı:** `_inceleme/tedavi-sayfalari-inceleme.pdf` gönderilecek; onaylanan sayfalar `onay: evet` yapılıp yayına alınacak. Çalışma `seo-sayfalar` dalında, onaya kadar GitHub'a gönderilmiyor
+- [ ] **Hoca onayı:** gizli önizleme linki https://candan26.github.io/bekircandan/onizleme/ (noindex, TASLAK etiketli, sitede linki yok) + PDF. Onaylanan sayfalar `onay: evet` yapılıp yayına alınacak; hepsi onaylanınca `onizleme/` silinecek
 - [ ] Yayın sonrası: Google Search Console'a sitemap gönderimi (alan adı bağlandıktan sonra), Google Ads açılış sayfaları olarak tedavi sayfalarının kullanılması
 
 ## 6. Yol haritası

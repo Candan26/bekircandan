@@ -5,6 +5,8 @@ Kullanım (website klasöründen):
                                      ana sayfadaki tedavi listesini, sitemap.xml ve robots.txt'yi günceller.
   python tools/build.py --inceleme  Hoca onayı için: tüm sayfaları "TASLAK" etiketiyle _inceleme/site/
                                      altına üretir ve _inceleme/tedavi-sayfalari-inceleme.pdf hazırlar.
+  python tools/build.py --onizleme  Paylaşılabilir gizli önizleme: tüm sayfaları "TASLAK" etiketi ve
+                                     noindex ile onizleme/ altına üretir (sitede link yok, sitemap'te yok).
 
 Ortak üst menü, alt bilgi ve ikonlar index.html'deki SHARED işaretleri arasından alınır.
 """
@@ -134,8 +136,7 @@ HEAD = Template('''<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>$title</title>
   <meta name="description" content="$description">
-  <link rel="canonical" href="$canonical">
-  <meta name="theme-color" content="#1b2c55">
+  $canonical_tag<meta name="theme-color" content="#1b2c55">
   <meta property="og:title" content="$title">
   <meta property="og:description" content="$description">
   <meta property="og:url" content="$canonical">
@@ -164,7 +165,7 @@ ARTICLE = Template('''<main id="top">
 $draft
   <section class="page-hero">
     <div class="container">
-      <nav class="crumbs" aria-label="Sayfa yolu"><a href="${root}">Ana Sayfa</a><span>›</span><a href="${root}tedaviler/">Tedaviler</a><span>›</span><span>$cat</span></nav>
+      <nav class="crumbs" aria-label="Sayfa yolu"><a href="${root}">Ana Sayfa</a><span>›</span><a href="${tx}tedaviler/">Tedaviler</a><span>›</span><span>$cat</span></nav>
       <h1>$h1</h1>
       <p class="page-hero__lead">$lead</p>
       <div class="page-hero__meta">
@@ -226,6 +227,11 @@ $cats
 DRAFT = '  <div class="draft-banner">TASLAK – Op. Dr. Bangin Bekir Candan\'ın onayı bekleniyor. Bu sayfa henüz yayında değil.</div>'
 
 
+def canonical_tag(url, review):
+    # Taslak/önizleme sayfaları noindex; henüz var olmayan canlı adrese canonical vermeyelim
+    return '' if review else f'<link rel="canonical" href="{url}">\n  '
+
+
 def jsonld(obj):
     return json.dumps(obj, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 
@@ -243,7 +249,9 @@ def physician():
 INNER_LINK = re.compile(r'<a href="\.\./([a-z0-9-]+)/">(.*?)</a>')
 
 
-def build_article(p, pages, root, review):
+def build_article(p, pages, root, review, tx=None):
+    """root: sitenin köküne göreli yol (assets, ana sayfa); tx: tedaviler/ klasörünün bulunduğu köke göreli yol."""
+    tx = root if tx is None else tx
     body, toc, faq = render_body(p['body_md'])
     # Onaysız (yayında olmayan) sayfalara verilen metin içi linkler düz yazıya çevrilir
     live = {q['slug'] for q in pages if q['yayinda']}
@@ -260,7 +268,7 @@ def build_article(p, pages, root, review):
     rel += sorted((q for q in visible if q['kategori'] == p['kategori'] and q not in rel), key=lambda q: q['sira'])
     related = ''
     if rel:
-        lis = ''.join(f'<li><a href="{root}tedaviler/{q["slug"]}/">{html.escape(q["baslik"])}</a></li>' for q in rel[:8])
+        lis = ''.join(f'<li><a href="{tx}tedaviler/{q["slug"]}/">{html.escape(q["baslik"])}</a></li>' for q in rel[:8])
         related = f'      <div class="aside-card"><h2>İlgili sayfalar</h2><ul class="aside-links">{lis}</ul></div>'
     reviewed = ''
     page_ld = {'@type': 'MedicalWebPage', 'name': p['baslik'], 'description': p['aciklama'], 'url': url,
@@ -280,22 +288,24 @@ def build_article(p, pages, root, review):
             for q, a in faq]})
     head = HEAD.substitute(root=root, title=html.escape(p['seo_baslik']), description=html.escape(p['aciklama']),
                            canonical=url, site=SITE_URL, robots='<meta name="robots" content="noindex">\n  ' if review else '',
+                           canonical_tag=canonical_tag(url, review),
                            jsonld=jsonld({'@context': 'https://schema.org', '@graph': graph}))
-    main = ARTICLE.substitute(root=root, draft=DRAFT if review else '', cat=cat[1], h1=html.escape(p['baslik']),
+    main = ARTICLE.substitute(root=root, tx=tx, draft=DRAFT if review else '', cat=cat[1], h1=html.escape(p['baslik']),
                               lead=html.escape(p['aciklama']), doctor=DOCTOR, reviewed=reviewed,
                               toc=toc_html, body=indent(body, 6), related=related)
     return head + rebase(shared('ICONS'), root) + rebase(shared('HEADER'), root) + main + \
         FOOT.substitute(root=root, footer=rebase(shared('FOOTER'), root))
 
 
-def build_index(pages, root, review):
+def build_index(pages, root, review, tx=None):
+    tx = root if tx is None else tx
     cats = []
     for cid, title, sub, icon in CATEGORIES:
         items = sorted((p for p in pages if p['kategori'] == cid and p['yayinda']), key=lambda p: p['sira'])
         if not items:
             continue
         cards = ''.join(f'''
-        <a class="tx-card" href="{root}tedaviler/{p["slug"]}/"><strong>{html.escape(p["baslik"])}</strong><span>{html.escape(p["aciklama"])}</span><svg><use href="#i-arrow"/></svg></a>'''
+        <a class="tx-card" href="{tx}tedaviler/{p["slug"]}/"><strong>{html.escape(p["baslik"])}</strong><span>{html.escape(p["aciklama"])}</span><svg><use href="#i-arrow"/></svg></a>'''
                         for p in items)
         cats.append(f'''    <section class="tx-cat">
       <h2><span class="svc__icon"><svg><use href="#{icon}"/></svg></span>{title}</h2>
@@ -306,7 +316,8 @@ def build_index(pages, root, review):
     ld = {'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': 'Tedaviler', 'url': url, 'inLanguage': 'tr'}
     head = HEAD.substitute(root=root, title=f'Tedaviler | {DOCTOR} – Bursa Ortopedi', site=SITE_URL,
                            description=html.escape(f'{DOCTOR} – Bursa Doruk Nilüfer Hastanesi: protez, artroskopi, kırık, el ve ayak cerrahisi tedavi sayfaları.'),
-                           canonical=url, robots='<meta name="robots" content="noindex">\n  ' if review else '', jsonld=jsonld(ld))
+                           canonical=url, robots='<meta name="robots" content="noindex">\n  ' if review else '', jsonld=jsonld(ld),
+                           canonical_tag=canonical_tag(url, review))
     main = INDEX.substitute(root=root, draft=DRAFT if review else '', doctor=DOCTOR, cats='\n'.join(cats))
     return head + rebase(shared('ICONS'), root) + rebase(shared('HEADER'), root) + main + \
         FOOT.substitute(root=root, footer=rebase(shared('FOOTER'), root))
@@ -393,6 +404,20 @@ def build_review():
     print(f'İnceleme: {len(pages)} sayfa → {site}\nPDF: {pdf}')
 
 
+def build_preview():
+    """Linki bilenlerin görebileceği gizli önizleme: /onizleme/tedaviler/... (noindex, TASLAK etiketi)."""
+    pages = load_pages(review=True)
+    out = ROOT / 'onizleme'
+    if out.exists():
+        shutil.rmtree(out)
+    for p in pages:
+        write(out / 'tedaviler' / p['slug'] / 'index.html', build_article(p, pages, '../../../', review=True, tx='../../'))
+    write(out / 'tedaviler' / 'index.html', build_index(pages, '../../', review=True, tx='../'))
+    write(out / 'index.html', '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">'
+          '<meta http-equiv="refresh" content="0; url=tedaviler/"><title>Önizleme</title><a href="tedaviler/">Tedaviler</a>\n')
+    print(f'Önizleme: {len(pages)} sayfa → {out}')
+
+
 def build_review_pdf(pages):
     ordered = sorted(pages, key=lambda p: ([c[0] for c in CATEGORIES].index(p['kategori']), p['sira']))
     toc, sections = [], []
@@ -445,4 +470,9 @@ ol.list em {{ color: #5d6782; font-style: normal; font-size: 8.5pt; }}
 
 
 if __name__ == '__main__':
-    build_review() if '--inceleme' in sys.argv else build_site()
+    if '--inceleme' in sys.argv:
+        build_review()
+    elif '--onizleme' in sys.argv:
+        build_preview()
+    else:
+        build_site()
