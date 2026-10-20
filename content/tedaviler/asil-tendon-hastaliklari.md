@@ -8,6 +8,7 @@ sira: 1
 tur: MedicalCondition
 ilgili: asil-tendon-onarimi, topuk-dikeni
 onay: hayır
+yayin: evet
 ---
 
 Aşil tendonu, baldır kaslarını topuk kemiğine bağlayan güçlü bir tendondur. Aşırı ve tekrarlayan yüklenmeler sonucunda tendonda ağrı, şişlik ve kalınlaşma gelişebilir. Bu duruma genel olarak **aşil tendinopatisi** veya halk arasında **aşil tendiniti** denir. Uzun süren tendon hasarı zamanla tendonu zayıflatarak yırtılma riskini artırabilir.

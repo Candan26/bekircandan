@@ -8,6 +8,7 @@ sira: 6
 tur: MedicalCondition
 ilgili: tetik-parmak, ganglion-kisti
 onay: hayır
+yayin: evet
 ---
 
 De Quervain hastalığı (De Quervain tenosinoviti), başparmağı hareket ettiren iki tendonun el bileğinin başparmak tarafındaki dar bir tünelden geçerken sıkışması ve tendon kılıfının iltihaplanmasıdır. El bileğinin başparmak tarafında, başparmağı ve bileği kullanmakla artan ağrıya yol açar.

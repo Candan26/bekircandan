@@ -8,6 +8,7 @@ sira: 5
 tur: MedicalProcedure
 ilgili: asil-tendon-hastaliklari, ayak-yaralanmalari
 onay: hayır
+yayin: evet
 ---
 
 Aşil tendonu, baldır kaslarını topuk kemiğine bağlayan ve vücudun en güçlü tendonudur. Yürürken, koşarken ve parmak ucunda yükselirken ayağımızı iten bu tendon, özellikle ani ve güçlü zorlanmalarda yırtılabilir. Doğru ve zamanında tedavi, tendon gücünün geri kazanılması için önemlidir.

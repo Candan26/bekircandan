@@ -8,6 +8,7 @@ sira: 2
 tur: MedicalProcedure
 ilgili: kalca-avaskuler-nekrozu, diz-protezi, kirik-tedavisi
 onay: hayır
+yayin: evet
 ---
 
 Kalça protezi, hasar görmüş kalça ekleminin yapay bir eklemle değiştirilmesidir. Uyluk kemiğinin top şeklindeki ucu (femur başı) ve leğen kemiğindeki yuvası (asetabulum) ağrı ve hareket kısıtlılığına yol açacak kadar bozulduğunda, protez ağrısız ve hareketli bir kalçaya kavuşmanın etkili yollarından biridir.

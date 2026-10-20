@@ -8,6 +8,7 @@ sira: 4
 tur: MedicalCondition
 ilgili: asil-tendon-hastaliklari, halluks-valgus
 onay: hayır
+yayin: evet
 ---
 
 Topuk dikeni, halk arasında topuk ağrısının en bilinen adıdır. Ağrının asıl nedeni çoğu zaman ayak tabanındaki kalın bağ dokusunun (plantar fasya) topuk kemiğine yapıştığı yerde gelişen zorlanma ve iltihaptır; buna **plantar fasiit** denir. Röntgende görülen kemik çıkıntısı (topuk dikeni) ise ağrının nedeni değil, uzun süreli zorlanmanın bir sonucu olabilir. Topuk dikeni olan pek çok kişide hiç ağrı olmazken, diken görülmeyen kişilerde de plantar fasiit gelişebilir.

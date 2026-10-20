@@ -8,6 +8,7 @@ sira: 1
 tur: MedicalCondition
 ilgili: kalca-protezi
 onay: hayır
+yayin: evet
 ---
 
 Kalça avasküler nekrozu (AVN), uyluk kemiğinin kalça eklemine oturan yuvarlak başının (femur başı) kanlanmasının bozulması sonucu kemik dokusunun canlılığını kaybetmesidir. Tedavi edilmediğinde femur başı zamanla çöker ve kalça ekleminde ileri kireçlenme gelişir. Genellikle 30–50 yaş arasındaki genç ve orta yaşlı erişkinlerde görülür ve sıklıkla iki kalçayı birden etkiler.

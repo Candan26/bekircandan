@@ -25,14 +25,14 @@ Tüm sayfaları "TASLAK" etiketiyle `_inceleme/site/` altına üretir ve hoca on
 ```bash
 python tools/build.py
 ```
-Siteyi üretir: sadece `onay: evet` olan sayfalar `tedaviler/` altına yazılır; ana sayfadaki uzmanlık kartlarında bu sayfalara link verilir; `sitemap.xml` ve `robots.txt` güncellenir. Onaysız sayfalara verilen metin içi linkler otomatik olarak düz yazıya çevrilir.
+Siteyi üretir: `yayin: evet` (veya `onay: evet`) olan sayfalar `tedaviler/` altına yazılır; ana sayfadaki uzmanlık kartlarında bu sayfalara link ve "Tüm tedavi sayfaları" butonu çıkar; `sitemap.xml` ve `robots.txt` güncellenir. Yayında olmayan sayfalara verilen metin içi linkler otomatik olarak düz yazıya çevrilir. Eski `/onizleme/` linkleri yayındaki sayfalara yönlendirilir.
 
 ```bash
 python tools/build.py --onizleme
 ```
-Paylaşılabilir gizli önizleme: tüm sayfaları "TASLAK" etiketi ve `noindex` ile `onizleme/` altına üretir. Sitede bu sayfalara link yoktur ve sitemap'e girmezler; sadece linki bilenler görür (https://candan26.github.io/bekircandan/onizleme/). Metinler değişince yeniden çalıştırılmalı; tüm sayfalar onaylanınca `onizleme/` klasörü silinir.
+Paylaşılabilir gizli önizleme (yeni taslaklar için): tüm sayfaları "TASLAK" etiketi ve `noindex` ile `onizleme/` altına üretir. Sitede bu sayfalara link yoktur ve sitemap'e girmezler; sadece linki bilenler görür (https://candan26.github.io/bekircandan/onizleme/). Metinler değişince yeniden çalıştırılmalı; tüm sayfalar onaylanınca `onizleme/` klasörü silinir.
 
-**Onay süreci:** Hoca bir sayfayı onaylayınca ilgili `.md` dosyasında `onay: evet` yapılır ve `onay_tarihi: YYYY-AA-GG` satırı eklenir (sayfada "tıbbi içerik … tarafından incelenmiştir" notu bu tarihle çıkar). Ardından `python tools/build.py` çalıştırılıp commit edilir.
+**Yayın ve onay:** `yayin: evet` sayfayı sitede yayınlar. `onay` alanı hocanın metni okuyup onayladığını gösterir: hoca onaylayınca `onay: evet` yapılır ve `onay_tarihi: YYYY-AA-GG` satırı eklenir (sayfada "tıbbi içerik … tarafından incelenmiştir" notu bu tarihle çıkar). Ardından `python tools/build.py` çalıştırılıp commit edilir.
 
 Alan adı bağlanınca `tools/build.py` içindeki `SITE_URL` güncellenip yeniden build alınmalıdır.
 

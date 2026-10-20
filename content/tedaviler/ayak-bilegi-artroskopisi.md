@@ -8,6 +8,7 @@ sira: 4
 tur: MedicalProcedure
 ilgili: ayak-yaralanmalari, diz-artroskopisi
 onay: hayır
+yayin: evet
 ---
 
 Ayak bileği artroskopisi, ayak bileği eklemine açılan küçük kesilerden kamera ve ince aletler yerleştirilerek yapılan kapalı ameliyattır. Özellikle burkulmalar ve spor yaralanmaları sonrasında geçmeyen ağrı, şişlik ve takılma şikâyetlerinin nedenini ortaya koymak ve tedavi etmek için kullanılır.

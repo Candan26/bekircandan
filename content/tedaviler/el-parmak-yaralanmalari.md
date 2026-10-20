@@ -8,6 +8,7 @@ sira: 7
 tur: MedicalCondition
 ilgili: kirik-tedavisi, tetik-parmak
 onay: hayır
+yayin: evet
 ---
 
 El, günlük hayatta en çok kullandığımız ve bu nedenle en sık yaralanan organlarımızdan biridir. Ev ve iş kazaları, spor yaralanmaları, düşmeler ve kesici aletlerle oluşan el ve parmak yaralanmaları, doğru tedavi edilmediğinde kalıcı hareket kısıtlılığı ve güç kaybına yol açabilir.

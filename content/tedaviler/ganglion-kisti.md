@@ -8,6 +8,7 @@ sira: 1
 tur: MedicalCondition
 ilgili: karpal-tunel-sendromu, de-quervain-hastaligi
 onay: hayır
+yayin: evet
 ---
 
 Ganglion kisti, eklem veya tendon kılıfından kaynaklanan, içi kıvamlı sıvıyla dolu iyi huylu bir kesedir. En sık el bileğinin üst yüzünde görülür; el bileğinin iç yüzünde, parmak diplerinde ve ayak üzerinde de ortaya çıkabilir. Kanser değildir ve başka bir yere yayılmaz.

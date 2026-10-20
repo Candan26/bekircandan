@@ -8,6 +8,7 @@ sira: 4
 tur: MedicalCondition
 ilgili: de-quervain-hastaligi, karpal-tunel-sendromu
 onay: hayır
+yayin: evet
 ---
 
 Tetik parmak, parmağı büken tendonun, avuç içindeki tünelden (tendon kılıfı) rahatça kayamaması sonucu parmağın bükülü pozisyonda takılması veya kilitlenmesidir. Parmak açılırken bir tetiğin bırakılması gibi aniden "tık" diye açıldığı için bu adı almıştır. En sık başparmak, yüzük ve orta parmakta görülür.

@@ -8,6 +8,7 @@ sira: 3
 tur: MedicalCondition
 ilgili: kirik-kaynamamasi, kirik-tedavisi
 onay: hayır
+yayin: evet
 ---
 
 Osteomiyelit, kemiğin mikroplarla (çoğunlukla bakterilerle) enfekte olmasıdır. Halk arasında "kemiğin mikrop kapması" veya "kemik iltihabı" olarak bilinir. Erken tanı ve doğru tedavi ile kontrol altına alınabilen bu durum, ihmal edildiğinde uzun süreli (kronik) hale gelebilir.

@@ -356,6 +356,7 @@ button { font: inherit; cursor: pointer; }
 .contact__photo figcaption strong { color: var(--navy); font-size: .95rem; }
 
 /* ---------- Tedavi sayfaları (tools/build.py) ---------- */
+.services__more { margin-top: 32px; text-align: center; }
 .svc li a { color: inherit; border-bottom: 1px dashed rgba(var(--accent-rgb), .6); transition: color .2s, border-color .2s; }
 .svc li a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .draft-banner { background: #fff4d6; color: #7a5200; text-align: center; padding: 10px 16px; font-weight: 700; font-size: .9rem; }

@@ -8,6 +8,7 @@ sira: 5
 tur: MedicalCondition
 ilgili: ayak-bilegi-artroskopisi, asil-tendon-onarimi, kirik-tedavisi
 onay: hayır
+yayin: evet
 ---
 
 Ayak ve ayak bileği, vücut ağırlığını taşıyan ve her adımda yük altında çalışan yapılardır. Bu nedenle spor sırasında, merdivenden inerken, düz olmayan zeminde yürürken veya düşmelerde sık yaralanırlar. En sık görülen yaralanma ayak bileği burkulmasıdır; bunu ayak ve ayak bileği kırıkları izler.

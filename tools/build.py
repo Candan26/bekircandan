@@ -1,7 +1,7 @@
 """Tedavi sayfalarını content/tedaviler/*.md dosyalarından üretir.
 
 Kullanım (website klasöründen):
-  python tools/build.py             Site: sadece `onay: evet` olan sayfaları üretir,
+  python tools/build.py             Site: `yayin: evet` veya `onay: evet` olan sayfaları üretir,
                                      ana sayfadaki tedavi listesini, sitemap.xml ve robots.txt'yi günceller.
   python tools/build.py --inceleme  Hoca onayı için: tüm sayfaları "TASLAK" etiketiyle _inceleme/site/
                                      altına üretir ve _inceleme/tedavi-sayfalari-inceleme.pdf hazırlar.
@@ -69,7 +69,9 @@ def parse(path):
         sys.exit(f'{path.name}: bilinmeyen kategori "{meta["kategori"]}"')
     meta['slug'] = path.stem
     meta['sira'] = int(meta['sira'])
+    # onay: hoca metni okudu (sayfada 'incelenmiştir' notu çıkar) · yayin: sayfa sitede yayında
     meta['onayli'] = meta['onay'].lower() in ('evet', 'yes', 'true')
+    meta['yayin'] = meta.get('yayin', 'hayır').lower() in ('evet', 'yes', 'true')
     meta['ilgili'] = [s.strip() for s in meta.get('ilgili', '').split(',') if s.strip()]
     meta['body_md'] = m.group(2).strip()
     return meta
@@ -105,8 +107,8 @@ def shared(name):
 
 def rebase(fragment, root):
     """Ana sayfadaki göreli linkleri alt sayfa derinliğine göre düzeltir."""
-    # Sadece <a> linkleri; ikonlardaki <use href="#..."> aynı sayfada kalmalı
-    fragment = re.sub(r'(<a\b[^>]*?\bhref=")#', lambda m: m.group(1) + root + '#', fragment)
+    # Sadece <a> linkleri (#bölüm ve tedaviler/ gibi göreli yollar); ikonlardaki <use href="#..."> aynı sayfada kalmalı
+    fragment = re.sub(r'(<a\b[^>]*?\bhref=")(?!https?:|mailto:|tel:|/|\.\./)', lambda m: m.group(1) + root, fragment)
     return fragment.replace('src="assets/', f'src="{root}assets/')
 
 
@@ -125,6 +127,8 @@ def services_block(pages):
           <ul>{lis}</ul>
         </article>''')
     out.append('      </div>')
+    if any(p['yayinda'] for p in pages):
+        out.append('      <div class="services__more reveal"><a href="tedaviler/" class="btn btn--ghost">Tüm tedavi sayfaları <svg><use href="#i-arrow"/></svg></a></div>')
     return '\n'.join(out) + '\n'
 
 
@@ -349,7 +353,7 @@ def load_pages(review):
     pages = [parse(f) for f in sorted(CONTENT.glob('*.md'))]
     check(pages)
     for p in pages:
-        p['yayinda'] = review or p['onayli']
+        p['yayinda'] = review or p['onayli'] or p['yayin']
         p['onay_tarihi'] = p.get('onay_tarihi') if p['onayli'] else None
     return pages
 
@@ -385,7 +389,8 @@ def build_site():
     write(ROOT / 'sitemap.xml', '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
           ''.join(f'  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n' for u, d in urls) + '</urlset>\n')
     write(ROOT / 'robots.txt', f'User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n')
-    print(f'Site: {len(live)}/{len(pages)} sayfa yayında (onaylı).')
+    write_preview_redirects(live)
+    print(f'Site: {len(live)}/{len(pages)} sayfa yayında; hoca onaylı: {sum(p["onayli"] for p in pages)}.')
 
 
 def build_review():
@@ -402,6 +407,24 @@ def build_review():
     write(site / 'tedaviler' / 'index.html', build_index(pages, '../', review=True))
     pdf = build_review_pdf(pages)
     print(f'İnceleme: {len(pages)} sayfa → {site}\nPDF: {pdf}')
+
+
+def redirect_html(target):
+    return (f'<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">'
+            f'<link rel="canonical" href="{target}"><meta http-equiv="refresh" content="0; url={target}">'
+            f'<title>Yönlendiriliyor…</title><a href="{target}">{target}</a>\n')
+
+
+def write_preview_redirects(live):
+    """Daha önce paylaşılan /onizleme/ linkleri, yayına alınan sayfalara yönlensin."""
+    out = ROOT / 'onizleme'
+    if not out.exists():
+        return
+    shutil.rmtree(out)
+    write(out / 'index.html', redirect_html(f'{SITE_URL}/tedaviler/' if live else f'{SITE_URL}/'))
+    write(out / 'tedaviler' / 'index.html', redirect_html(f'{SITE_URL}/tedaviler/' if live else f'{SITE_URL}/'))
+    for p in live:
+        write(out / 'tedaviler' / p['slug'] / 'index.html', redirect_html(f'{SITE_URL}/tedaviler/{p["slug"]}/'))
 
 
 def build_preview():

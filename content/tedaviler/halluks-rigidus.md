@@ -8,6 +8,7 @@ sira: 3
 tur: MedicalCondition
 ilgili: halluks-valgus, topuk-dikeni
 onay: hayır
+yayin: evet
 ---
 
 Halluks rigidus, ayak başparmağının kök eklemindeki (birinci metatarsofalangeal eklem) kireçlenmedir. Eklem kıkırdağı aşındıkça başparmağın yukarı doğru bükülmesi kısıtlanır ve eklem sertleşir. Yürürken her adımda başparmak eklemi büküldüğünden, bu durum yürüyüşü belirgin şekilde etkileyebilir.

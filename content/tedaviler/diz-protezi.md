@@ -8,6 +8,7 @@ sira: 1
 tur: MedicalProcedure
 ilgili: kalca-protezi, diz-artroskopisi
 onay: hayır
+yayin: evet
 ---
 
 Diz protezi, aşınmış ve hasar görmüş diz eklemi yüzeylerinin metal ve özel plastikten yapılmış yapay parçalarla kaplanmasıdır. Halk arasında "diz değişimi" olarak da bilinir. Amaç ağrıyı azaltmak, dizin hareket kabiliyetini geri kazandırmak ve günlük yaşamı yeniden rahatça sürdürebilmektir.

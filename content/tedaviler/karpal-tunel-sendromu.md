@@ -8,6 +8,7 @@ sira: 2
 tur: MedicalCondition
 ilgili: ulnar-tunel-sendromu, tetik-parmak
 onay: hayır
+yayin: evet
 ---
 
 Karpal tünel sendromu, el bileğinde "karpal tünel" adı verilen dar kanaldan geçen orta sinirin (median sinir) sıkışmasıdır. Elde uyuşma ve karıncalanmanın en sık nedenlerinden biridir. Özellikle geceleri elin uyuşarak uykudan uyandırması tipik bir şikâyettir.

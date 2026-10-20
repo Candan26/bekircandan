@@ -8,6 +8,7 @@ sira: 5
 tur: MedicalCondition
 ilgili: ulnar-tunel-sendromu, dirsek-cikigi
 onay: hayır
+yayin: evet
 ---
 
 Tenisçi dirseği (lateral epikondilit) dirseğin dış tarafında, golfçü dirseği (medial epikondilit) ise iç tarafında hissedilen ağrıdır. Her ikisi de önkol kaslarının dirsek kemiğine yapıştığı tendonların aşırı kullanım sonucu zorlanmasıyla gelişir. İsimlerine rağmen bu sporları yapmayan kişilerde çok daha sık görülür.

@@ -8,6 +8,7 @@ sira: 3
 tur: MedicalProcedure
 ilgili: diz-artroskopisi
 onay: hayır
+yayin: evet
 ---
 
 Ön çapraz bağ (ÖÇB), dizin ortasında uyluk kemiği ile kaval kemiğini birbirine bağlayan ve dizin öne kaymasını, dönme hareketlerinde boşalmasını önleyen önemli bir bağdır. Özellikle futbol, basketbol, voleybol ve kayak gibi ani duruş, dönüş ve sıçrama içeren sporlarda sık yaralanır.

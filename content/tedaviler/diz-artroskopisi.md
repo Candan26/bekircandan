@@ -8,6 +8,7 @@ sira: 2
 tur: MedicalProcedure
 ilgili: on-capraz-bag-ameliyati, diz-protezi
 onay: hayır
+yayin: evet
 ---
 
 Diz artroskopisi, diz eklemine açılan birkaç küçük delikten yerleştirilen kamera ve ince aletlerle yapılan kapalı ameliyattır. Menisküs yırtıkları, kıkırdak hasarları ve bağ yaralanmaları gibi pek çok diz probleminin hem tanısında hem de tedavisinde kullanılır.

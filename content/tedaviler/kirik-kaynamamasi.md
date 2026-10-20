@@ -8,6 +8,7 @@ sira: 2
 tur: MedicalCondition
 ilgili: kirik-tedavisi, kemik-enfeksiyonu
 onay: hayır
+yayin: evet
 ---
 
 Kırıkların büyük çoğunluğu uygun tedaviyle kaynar. Ancak bazı hastalarda kemik beklenen sürede iyileşmez. Kemiğin beklenenden geç kaynamasına **gecikmiş kaynama**, kırık uçlarının birleşmeden kalmasına ise **kaynamama (psödoartroz)** denir. Kaynamayan kırıklar ağrıya, hareket kaybına ve şekil bozukluğuna yol açabilir; çoğu zaman cerrahi tedavi gerektirir.

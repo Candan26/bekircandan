@@ -8,6 +8,7 @@ sira: 1
 tur: MedicalProcedure
 ilgili: omuz-cikigi, diz-artroskopisi
 onay: hayır
+yayin: evet
 ---
 
 Omuz artroskopisi, omuz eklemine birkaç küçük kesiden yerleştirilen ince bir kamera ve özel aletlerle yapılan "kapalı" ameliyattır. Eklemin içi büyütülmüş görüntüyle ekranda izlenir; yırtık tendonlar onarılabilir, sıkışmaya neden olan dokular temizlenebilir. Açık ameliyata göre daha küçük kesilerle yapıldığı için doku hasarı daha azdır.

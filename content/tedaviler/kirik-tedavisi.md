@@ -8,6 +8,7 @@ sira: 1
 tur: MedicalProcedure
 ilgili: kirik-kaynamamasi, kemik-enfeksiyonu, kalca-protezi
 onay: hayır
+yayin: evet
 ---
 
 Kırık, kemiğin bütünlüğünün bozulmasıdır. Düşme, trafik kazası, spor yaralanması veya iş kazası gibi travmalarla oluşabileceği gibi, kemik erimesi (osteoporoz) olan kişilerde basit bir düşmeyle de meydana gelebilir. Kırık tedavisinin amacı kemiğin doğru pozisyonda kaynamasını sağlamak ve uzuv fonksiyonlarını mümkün olan en iyi şekilde geri kazandırmaktır.

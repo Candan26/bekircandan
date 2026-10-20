@@ -8,6 +8,7 @@ sira: 3
 tur: MedicalCondition
 ilgili: omuz-cikigi, kirik-tedavisi, tenisci-golfcu-dirsegi
 onay: hayır
+yayin: evet
 ---
 
 Dirsek çıkığı, dirsek eklemini oluşturan kol kemiği (humerus) ile önkol kemiklerinin (radius ve ulna) eklem yüzeylerinin birbirinden ayrılmasıdır. Erişkinlerde omuzdan sonra en sık çıkan büyük eklemdir. Genellikle düşerken açık kol üzerine yaslanma sonucu oluşur ve acil tedavi gerektirir.

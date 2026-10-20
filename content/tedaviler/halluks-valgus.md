@@ -8,6 +8,7 @@ sira: 2
 tur: MedicalCondition
 ilgili: halluks-rigidus, topuk-dikeni
 onay: hayır
+yayin: evet
 ---
 
 Halluks valgus, ayak başparmağının diğer parmaklara doğru kayması ve başparmak kökünde, ayağın iç kenarında kemik çıkıntısı oluşmasıdır. Halk arasında "ayakta kemik çıkması", "bunyon" veya "başparmak çıkıntısı" olarak da bilinir. Zamanla ilerleyerek ayakkabı giymeyi zorlaştırabilir ve diğer parmaklarda da şekil bozukluklarına yol açabilir.

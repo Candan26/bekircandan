@@ -8,6 +8,7 @@ sira: 3
 tur: MedicalCondition
 ilgili: karpal-tunel-sendromu, tenisci-golfcu-dirsegi
 onay: hayır
+yayin: evet
 ---
 
 Ulnar sinir, kolun iç tarafından ele uzanan ve serçe parmak ile yüzük parmağının yarısının hissini, elin ince hareketlerini sağlayan kasları kontrol eden sinirdir. Bu sinir en sık dirsekte (**kübital tünel sendromu**), daha seyrek olarak el bileğinde (**ulnar tünel / Guyon kanalı sendromu**) sıkışır. Halk arasında "dirseğin elektrik çarpan yeri" olarak bilinen bölge, ulnar sinirin dirsekten geçtiği yerdir.

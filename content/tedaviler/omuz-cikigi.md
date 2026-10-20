@@ -8,6 +8,7 @@ sira: 2
 tur: MedicalCondition
 ilgili: omuz-artroskopisi, dirsek-cikigi
 onay: hayır
+yayin: evet
 ---
 
 Omuz, vücudun en geniş hareket açıklığına sahip eklemidir; bu esneklik onu aynı zamanda en sık çıkan eklem yapar. Omuz çıkığında kol kemiğinin (humerus) başı, kürek kemiğindeki sığ eklem yuvasından dışarı çıkar. Çıkıkların büyük çoğunluğu öne doğru olur. Özellikle gençlerde ilk çıkıktan sonra omzun tekrar çıkma eğilimi yüksektir.

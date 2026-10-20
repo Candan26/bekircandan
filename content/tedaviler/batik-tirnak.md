@@ -8,6 +8,7 @@ sira: 6
 tur: MedicalCondition
 ilgili: halluks-valgus, ayak-yaralanmalari
 onay: hayır
+yayin: evet
 ---
 
 Batık tırnak (tırnak batması), tırnağın yan kenarının çevresindeki deriye gömülerek ağrı, kızarıklık ve iltihaplanmaya yol açmasıdır. En sık ayak başparmağında görülür. Basit önlemlerle düzelebileceği gibi, tekrarlayan ve iltihaplanan vakalarda küçük bir cerrahi işlem gerekebilir.
