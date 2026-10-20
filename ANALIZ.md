@@ -47,7 +47,7 @@
 ## 3. Eksik bilgiler – Bekir Bey'den istenecek ❗
 - [x] Telefon: Doruk randevu hattı 444 0 455 kullanılıyor
 - [x] WhatsApp: +90 545 545 91 09 (Bekir abinin cep numarası; sitede yazı olarak görünmez, sadece WhatsApp butonları ve randevu formu kullanır)
-- [ ] Hakkımda için güncel fotoğraf (Kübra Hanım gönderecek)
+- [x] Hakkımda için güncel fotoğraf geldi (Doruk logolu beyaz önlük); Doruk lobisi fotoğrafı iletişim bölümüne eklendi
 - [ ] **Facebook** sayfa linki
 - [x] **Özgeçmiş** geldi ve eklendi
 - [ ] (İsteğe bağlı) Özgeçmişe yıllar: tıp mezuniyeti, uzmanlık, her kurumda çalışma yılları; varsa sertifika/kurslar
@@ -66,7 +66,7 @@ Ayrıca alt bilgide "bilgilendirme amaçlıdır, tanı/tedavi yerine geçmez" uy
 - [x] Hero'daki hareketli kart yüzü kapatıyordu → fotoğrafın orta hizasına alındı
 - [x] Hero'daki tekrar eden "Bursa · Doruk Nilüfer Hastanesi" satırı kaldırıldı (konum kartı zaten gösteriyor)
 - [x] "Doruk Çağrı Merkezi" butonu yerine telefon alanında "Doruk Randevu Hattı · 444 0 455"
-- [ ] Hakkımda fotoğrafı: güncel fotoğraf bekleniyor
+- [x] Hakkımda fotoğrafı güncellendi (20.10.2026)
 - [ ] SEO içerikleri: her tedavi için Google'ın indeksleyeceği içerik sayfaları (Google Ads'e çıkılacak) → yapay zekayla yazılacak, hoca onaylayacak
 
 ## 6. Yol haritası
