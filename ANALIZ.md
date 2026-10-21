@@ -95,7 +95,8 @@ Amaç: sosyal medya uzmanı GitHub'a girmeden video ve görselleri kendisi günc
 
 **Aşama 4 – Yayın**
 - [x] Alan adı bağlantısı: GitHub Pages özel alan adı + HTTPS (bekircandan.com → www'ye yönlenir)
-- [ ] Google Business profili, Search Console, sitemap
+- [x] Google Search Console: bekircandan.com doğrulandı, sitemap.xml gönderildi (21.10.2026)
+- [ ] Google Business profili (Haritalar) – hekim profili / Doruk Nilüfer adresiyle
 - [ ] Randevu formunu e-postaya da düşürme (Formspree vb.)
 - [ ] İngilizce dil seçeneği (istenirse)
 
