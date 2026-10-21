@@ -30,7 +30,7 @@ Siteyi üretir: `yayin: evet` (veya `onay: evet`) olan sayfalar `tedaviler/` alt
 ```bash
 python tools/build.py --onizleme
 ```
-Paylaşılabilir gizli önizleme (yeni taslaklar için): tüm sayfaları "TASLAK" etiketi ve `noindex` ile `onizleme/` altına üretir. Sitede bu sayfalara link yoktur ve sitemap'e girmezler; sadece linki bilenler görür (https://candan26.github.io/bekircandan/onizleme/). Metinler değişince yeniden çalıştırılmalı; tüm sayfalar onaylanınca `onizleme/` klasörü silinir.
+Paylaşılabilir gizli önizleme (yeni taslaklar için): tüm sayfaları "TASLAK" etiketi ve `noindex` ile `onizleme/` altına üretir. Sitede bu sayfalara link yoktur ve sitemap'e girmezler; sadece linki bilenler görür (https://www.bekircandan.com/onizleme/). Metinler değişince yeniden çalıştırılmalı; tüm sayfalar onaylanınca `onizleme/` klasörü silinir.
 
 **Yayın ve onay:** `yayin: evet` sayfayı sitede yayınlar. `onay` alanı hocanın metni okuyup onayladığını gösterir: hoca onaylayınca `onay: evet` yapılır ve `onay_tarihi: YYYY-AA-GG` satırı eklenir (sayfada "tıbbi içerik … tarafından incelenmiştir" notu bu tarihle çıkar). Ardından `python tools/build.py` çalıştırılıp commit edilir.
 

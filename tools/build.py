@@ -27,7 +27,7 @@ CONTENT = ROOT / 'content' / 'tedaviler'
 REVIEW = ROOT / '_inceleme'
 
 # Alan adı bağlanınca burası değişecek (sonunda / olmadan)
-SITE_URL = 'https://candan26.github.io/bekircandan'
+SITE_URL = 'https://www.bekircandan.com'
 
 DOCTOR = 'Op. Dr. Bangin Bekir Candan'
 CATEGORIES = [

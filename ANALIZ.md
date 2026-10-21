@@ -54,7 +54,7 @@
 - [x] Çalışma saatleri: Pazar hariç her gün 09.00–18.00
 - [x] E-posta: bbekircandan@hotmail.com (".com" uzantısı teyit edilecek)
 - [x] Logo geldi; ikon kısmı menüde, alt bilgide ve favicon'da kullanılıyor (vektörel SVG hali gelirse daha keskin olur)
-- [ ] Alan adı tercihi (ör. `bekircandan.com`, `drbekircandan.com`)
+- [x] Alan adı: **www.bekircandan.com** (Cloudflare Registrar, 21.10.2026; DNS Cloudflare'de, "DNS only")
 
 ## 4. Dikkat: Sağlık tanıtım mevzuatı ⚠️
 Notlardaki "Bursa'da en iyi benim", "Bursa'da layıkıyla yapan 4 kişiden biri" gibi **karşılaştırmalı üstünlük ifadeleri siteye konmadı.** Sağlık Bakanlığı'nın sağlık hizmetleri tanıtım/reklam düzenlemeleri ve Türk Tabipleri Birliği etik kuralları hekimlerin kendini diğerlerinden üstün gösteren ifadeler kullanmasını yasaklıyor; şikâyet/ceza riski var. Bunun yerine deneyimi anlatan nötr ifadeler kullanılabilir (ör. "omuz ve ayak bileği artroskopisinde yoğun deneyim").
@@ -94,7 +94,7 @@ Amaç: sosyal medya uzmanı GitHub'a girmeden video ve görselleri kendisi günc
 - [ ] İsteğe bağlı: iletişim bilgileri ve çalışma saatleri de panelden düzenlensin
 
 **Aşama 4 – Yayın**
-- [ ] Alan adı bağlantısı (Cloudflare DNS)
+- [x] Alan adı bağlantısı: GitHub Pages özel alan adı + HTTPS (bekircandan.com → www'ye yönlenir)
 - [ ] Google Business profili, Search Console, sitemap
 - [ ] Randevu formunu e-postaya da düşürme (Formspree vb.)
 - [ ] İngilizce dil seçeneği (istenirse)

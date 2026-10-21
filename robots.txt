@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://candan26.github.io/bekircandan/sitemap.xml
+Sitemap: https://www.bekircandan.com/sitemap.xml
